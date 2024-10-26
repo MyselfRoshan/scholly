@@ -478,8 +478,9 @@ h2 {
         position: absolute;
         width: 56px;
         height: 454px;
+        /* height: inherit; */
         right: -12px;
-        bottom: -12px;
+        bottom: -30.09px;
         background-color: var(--secondary-clr);
         border-top-right-radius: 0.25rem;
         border-bottom-right-radius: 1rem;
