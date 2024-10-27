@@ -216,11 +216,13 @@ body {
     }
 
     &.btn-primary {
+        font-weight: var(--fw-500);
         --_btn-clr: var(--primary-clr);
         --_btn-txt-clr: var(--white-clr);
     }
 
     &.btn-secondary {
+        font-weight: var(--fw-500);
         --_btn-clr: var(--secondary-clr);
         --_btn-txt-clr: var(--white-clr);
     }
@@ -629,12 +631,30 @@ h2 {
     /* width: 262px; */
     /* width: min(100%, 400px); */
     padding: 1rem;
+    position: relative;
+    isolation: isolate;
+    /* overflow: clip; */
+    contain: paint;
     border-radius: 0.75rem;
     border: 1px solid #d5d5d5;
     transition: all 180ms ease;
 
     &:hover {
         border: 1px solid var(--secondary-clr);
+    }
+}
+
+.counselor-card-bg-img {
+    position: absolute;
+    z-index: -1;
+    top: 7px;
+    right: -53px;
+    width: 175px;
+    height: 331px;
+
+    svg {
+        width: 100%;
+        height: 100%;
     }
 }
 
@@ -703,11 +723,12 @@ h2 {
 }
 .tag {
     padding: 0.25rem;
-    color: var(--secondary-clr);
     font-size: var(--fs-200);
     line-height: 14.4px;
     border: 1px solid #d5d5d5;
     border-radius: 0.25rem;
+    color: var(--secondary-clr);
+    background-color: var(--white-clr);
     transition: all 180ms ease;
 
     &:hover {
@@ -721,21 +742,14 @@ h2 {
 /* End of Counselor */
 /* Advantage */
 .advantage {
-    --_advantage-content-padding: 1.25rem;
-
     .content {
-        display: grid;
-        grid-template-columns: 1fr 400px;
-        background-color: var(--tertiary-clr);
-        border-radius: 0.25rem;
-        padding: var(--_advantage-content-padding);
-        /* overflow-y: clip;
-        overflow-clip-margin: 0.625rem; */
-    }
-
-    .column:last-of-type {
+        padding: 1.5rem;
         position: relative;
         isolation: isolate;
+        display: grid;
+        grid-template-columns: 1fr 400px;
+        border-radius: 0.25rem;
+        background-color: var(--tertiary-clr);
     }
 
     .btn {
@@ -750,15 +764,17 @@ h2 {
     h2 {
         color: var(--white-clr);
     }
+
+    p {
+        line-height: 26px;
+    }
 }
 
 .advantage-img {
     width: 400px;
     height: 188px;
-    /* height: px; */
     position: absolute;
-    /* -0.625rem + padding */
-    bottom: calc((-0.875rem * 2) - var(--_advantage-content-padding));
+    bottom: 0;
     border-top-left-radius: 50%;
     border-top-right-radius: 50%;
 
