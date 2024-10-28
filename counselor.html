@@ -4,18 +4,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
+  <title>Counselor</title>
 
   <!-- Font -->
   <link href="./assets/css/fonts.css" rel="stylesheet" type="text/css" />
   <!-- End of Font -->
 
   <!-- CSS -->
-  <link href="./assets/css/main.css" rel="stylesheet" type="text/css" />
+  <link href="./assets/css/root.css" rel="stylesheet" type="text/css" />
+  <link href="./assets/css/utilities.css" rel="stylesheet" type="text/css" />
+  <link href="./assets/css/header-footer.css" rel="stylesheet" type="text/css" />
+  <link href="./assets/css/counselor.css" rel="stylesheet" type="text/css" />
   <!-- End of CSS -->
 
   <!-- Script -->
   <script defer src="./assets/js/faq.js"></script>
+  <script defer src="./assets/js/trusted-institutions.js"></script>
   <!-- End of Script -->
 </head>
 
@@ -52,7 +56,11 @@
         </div>
         <div class="column">
           <div class="hero-caracter-img">
-            <img src="./assets/images/hero/caracter.png" alt="" />
+            <picture>
+              <source media="(min-width: 1024px)" srcset="./assets/images/hero/caracter.png" />
+              <img src="./assets/images/hero/caracter-210x283.png" alt="" />
+            </picture>
+            <!-- <img src="./assets/images/hero/caracter-210x283.png" alt="" srcset="" /> -->
           </div>
         </div>
       </div>
@@ -61,53 +69,37 @@
     <!-- Trusted -->
     <section class="trusted wrapper">
       <div class="content">
-        <div class="trusted-top">
-          <header class="trusted-header">
-            <h2>Trusted by Leading Institutions</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu
-              arcu id mi sollicitudin commodo a a augue.
-            </p>
-          </header>
-          <div class="trusted-institutions-btns">
-            <button class="left">
-              <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M6.65456 17.5084C7.06237 17.9167 7.71986 17.9167 8.12767 17.5084L15.0438 10.5834C15.3684 10.2584 15.3684 9.73337 15.0438 9.40837L8.12767 2.48337C7.71986 2.07504 7.06237 2.07504 6.65456 2.48337C6.24675 2.89171 6.24675 3.55004 6.65456 3.95837L12.6802 10L6.64624 16.0417C6.24675 16.4417 6.24675 17.1084 6.65456 17.5084Z"
-                  fill="#701B64" />
-              </svg>
-            </button>
-            <button class="right">
-              <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M6.65456 17.5084C7.06237 17.9167 7.71986 17.9167 8.12767 17.5084L15.0438 10.5834C15.3684 10.2584 15.3684 9.73337 15.0438 9.40837L8.12767 2.48337C7.71986 2.07504 7.06237 2.07504 6.65456 2.48337C6.24675 2.89171 6.24675 3.55004 6.65456 3.95837L12.6802 10L6.64624 16.0417C6.24675 16.4417 6.24675 17.1084 6.65456 17.5084Z"
-                  fill="#701B64" />
-              </svg>
-            </button>
-          </div>
-        </div>
-
-        <div class="trusted-institutions">
-          <div class="institution">
-            <img src="./assets/images/trusted/image_1.png" alt="Scholly" />
-          </div>
-          <div class="institution">
-            <img src="./assets/images/trusted/image_2.png" alt="Scholly" />
-          </div>
-          <div class="institution">
-            <img src="./assets/images/trusted/image_3.png" alt="Scholly" />
-          </div>
-          <div class="institution">
-            <img src="./assets/images/trusted/image_4.png" alt="Scholly" />
-          </div>
-          <div class="institution">
-            <img src="./assets/images/trusted/image_5.png" alt="Scholly" />
-          </div>
-          <div class="institution">
-            <img src="./assets/images/trusted/image_6.png" alt="Scholly" />
-          </div>
-          <div class="institution">
-            <img src="./assets/images/trusted/image_1.png" alt="Scholly" />
+        <!-- <div class="trusted-top"> -->
+        <header class="trusted-header">
+          <h2>Trusted by Leading Institutions</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu
+            arcu id mi sollicitudin commodo a a augue.
+          </p>
+        </header>
+        <div class="trusted-institutions-slider">
+          <div class="trusted-institutions">
+            <div class="institution">
+              <img src="./assets/images/trusted/image_1.png" alt="Scholly" />
+            </div>
+            <div class="institution">
+              <img src="./assets/images/trusted/image_2.png" alt="Scholly" />
+            </div>
+            <div class="institution">
+              <img src="./assets/images/trusted/image_3.png" alt="Scholly" />
+            </div>
+            <div class="institution">
+              <img src="./assets/images/trusted/image_4.png" alt="Scholly" />
+            </div>
+            <div class="institution">
+              <img src="./assets/images/trusted/image_5.png" alt="Scholly" />
+            </div>
+            <div class="institution">
+              <img src="./assets/images/trusted/image_6.png" alt="Scholly" />
+            </div>
+            <div class="institution">
+              <img src="./assets/images/trusted/image_1.png" alt="Scholly" />
+            </div>
           </div>
         </div>
       </div>

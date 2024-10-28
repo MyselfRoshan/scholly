@@ -1,0 +1,145 @@
+:root {
+    /* #701B64 */
+    --primary-clr: hsl(308, 61%, 27%);
+    /* #A90466 */
+    --secondary-clr: hsl(324, 95%, 34%);
+    --secondary-clr-5: hsla(324, 95%, 34%, 10%);
+    /* #262F45 */
+    --tertiary-clr: hsl(223, 29%, 21%);
+    /* #FFFFFF */
+    --white-clr: hsl(0, 0%, 100%);
+    /* #333333 */
+    --black-clr: hsl(0, 0%, 20%);
+    /* #1865F2 */
+    --extra-clr: hsl(219, 89%, 52%);
+    /* #545760 */
+    --text-clr: hsl(225, 7%, 35%);
+
+    /* 40px */
+    /* --fs-900: 2.5rem; */
+    /* 30px */
+    /* --fs-800: 1.875rem; */
+    /* 20px */
+    --fs-600: 1.25rem;
+    /* 18px */
+    --fs-500: 1.125rem;
+    /* 16px */
+    --fs-400: 1rem;
+    /* 14px */
+    --fs-300: 0.875rem;
+    /* 12px */
+    --fs-200: 0.75rem;
+
+    /* 40px */
+    --fs-900: clamp(2rem, 2.3vw + 1rem, 2.5rem);
+    /* 30px */
+    --fs-800: clamp(1.5rem, 3vw + 0.2rem, 1.875rem);
+
+    --fw-100: 100;
+    --fw-200: 200;
+    --fw-300: 300;
+    --fw-400: 400;
+    --fw-500: 500;
+    --fw-600: 600;
+    --fw-700: 700;
+    --fw-800: 800;
+    --fw-900: 900;
+}
+
+/* Box sizing rules*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Reset margin, padding and font-size */
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+/* Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* Allow percentage-based heights in the application */
+html,
+body {
+    height: 100%;
+}
+
+/* Set core root defaults */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+a.primary-nav__link,
+a.nav-link {
+    text-decoration: none;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+video,
+canvas,
+svg {
+    max-width: 100%;
+    display: block;
+}
+
+/* Blur images when they have no alt attribute */
+img:not([alt]) {
+    filter: blur(10px);
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Remove animations and transition on window resize */
+.resize-animation-stopper * {
+    animation: none !important;
+    transition: none !important;
+}
+
+/* Custom CSS */
+body {
+    font-family: "Lato", sans-serif;
+    font-size: var(--fs-400);
+    font-weight: var(--fw-400);
+    color: var(--text-clr);
+    line-height: 19.2px;
+}
