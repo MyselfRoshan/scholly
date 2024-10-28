@@ -3,7 +3,8 @@
     --primary-clr: hsl(308, 61%, 27%);
     /* #A90466 */
     --secondary-clr: hsl(324, 95%, 34%);
-    --secondary-clr-5: hsla(324, 95%, 34%, 10%);
+    --secondary-clr-5: hsla(324, 95%, 34%, 5%);
+    --secondary-clr-15: hsla(324, 95%, 34%, 15%);
     /* #262F45 */
     --tertiary-clr: hsl(223, 29%, 21%);
     /* #FFFFFF */
@@ -51,6 +52,7 @@
 *::before,
 *::after {
     box-sizing: border-box;
+    /* border: 1px solid red; */
 }
 
 /* Reset margin, padding and font-size */

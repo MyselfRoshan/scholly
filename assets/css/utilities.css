@@ -121,12 +121,19 @@
 
     &.btn-2xl {
         width: 13.5rem;
-        /* padding: 1rem 2.5rem; */
     }
 
     &.btn-full {
         width: 100%;
-        /* padding: 1rem 2.5rem; */
+    }
+    &.btn-partner {
+        border: none;
+        border-bottom: 2px solid var(--secondary-clr);
+
+        &:hover {
+            outline: none;
+            border-bottom-color: var(--white-clr);
+        }
     }
 }
 
