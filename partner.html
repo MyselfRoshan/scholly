@@ -8,6 +8,13 @@
 
     <!-- Font -->
     <link href="./assets/css/fonts.css" rel="stylesheet" type="text/css" />
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
     <!-- End of Font -->
 
     <!-- CSS -->
@@ -22,6 +29,17 @@
     <script defer src="./assets/js/joined-partners.js"></script>
     <script defer src="./assets/js/partner-testimonials.js"></script>
     <!-- End of Script -->
+
+    <!-- Phone Number -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@24.6.0/build/css/intlTelInput.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/intl-tel-input@24.6.0/build/js/intlTelInput.min.js"></script>
+    <script defer>
+        const input = document.querySelector("#phone")
+        intlTelInput(input, {
+            loadUtilsOnInit: "https://cdn.jsdelivr.net/npm/intl-tel-input@24.6.0/build/js/utils.js",
+        });
+    </script>
+    <!-- End of Phone Number -->
 </head>
 
 <body>
@@ -53,15 +71,14 @@
                         endless possibilities for growth by partnering with
                         us.
                     </p>
-                    <button class="btn btn-xl btn-full btn-partner icon">
+                    <button class="btn btn-xl btn-full icon">
                         <span>Become a Partner</span>
-                        <!-- Join With Us -->
                         <div class="btn-icon">
                             <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                     d="M6.65456 17.5084C7.06237 17.9167 7.71986 17.9167 8.12767 17.5084L15.0438 10.5834C15.3684 10.2584 15.3684 9.73337 15.0438 9.40837L8.12767 2.48337C7.71986 2.07504 7.06237 2.07504 6.65456 2.48337C6.24675 2.89171 6.24675 3.55004 6.65456 3.95837L12.6802 10L6.64624 16.0417C6.24675 16.4417 6.24675 17.1084 6.65456 17.5084Z"
-                                    fill="#701B64" />
+                                    fill="currentColor" />
                             </svg>
                         </div>
                     </button>
@@ -85,15 +102,15 @@
                 </header>
                 <ul class="accelerate-cards">
                     <li class="accelerate-card">
-                        <header class="accelerate-card-header">
-                            <div class="accelerate-card-icon">
-                                <img src="./assets/images/accelerate/icon-1.svg" alt="Avater Group" />
-                            </div>
-                            <h3 class="accelerate-card-title">
-                                Attach Diverse Nationality students to your
-                                campus
-                            </h3>
-                        </header>
+                        <!-- <header class="accelerate-card-header"> -->
+                        <div class="accelerate-card-icon">
+                            <img src="./assets/images/accelerate/icon-1.svg" alt="Avater Group" />
+                        </div>
+                        <h3 class="accelerate-card-title">
+                            Attach Diverse Nationality students to your
+                            campus
+                        </h3>
+                        <!-- </header> -->
                         <p class="accelerate-card-description">
                             Lorem ipsum dolor sit amet, consectetur
                             adipiscing elit. Proin euismod urna sit amet
@@ -104,15 +121,15 @@
                         </p>
                     </li>
                     <li class="accelerate-card">
-                        <header class="accelerate-card-header">
-                            <div class="accelerate-card-icon">
-                                <img src="./assets/images/accelerate/icon-2.svg" alt="Avater Group" />
-                            </div>
-                            <h3 class="accelerate-card-title">
-                                Receive High Quality Student applications
-                                with verified documents
-                            </h3>
-                        </header>
+                        <!-- <header class="accelerate-card-header"> -->
+                        <div class="accelerate-card-icon">
+                            <img src="./assets/images/accelerate/icon-2.svg" alt="Avater Group" />
+                        </div>
+                        <h3 class="accelerate-card-title">
+                            Receive High Quality Student applications
+                            with verified documents
+                        </h3>
+                        <!-- </header> -->
                         <p class="accelerate-card-description">
                             Lorem ipsum dolor sit amet, consectetur
                             adipiscing elit. Proin euismod urna sit amet
@@ -123,15 +140,15 @@
                         </p>
                     </li>
                     <li class="accelerate-card">
-                        <header class="accelerate-card-header">
-                            <div class="accelerate-card-icon">
-                                <img src="./assets/images/accelerate/icon-3.svg" alt="Avater Group" />
-                            </div>
-                            <h3 class="accelerate-card-title">
-                                Maximise Your Enrolment Numbers to wide
-                                discipline of study Areas
-                            </h3>
-                        </header>
+                        <!-- <header class="accelerate-card-header"> -->
+                        <div class="accelerate-card-icon">
+                            <img src="./assets/images/accelerate/icon-3.svg" alt="Avater Group" />
+                        </div>
+                        <h3 class="accelerate-card-title">
+                            Maximise Your Enrolment Numbers to wide
+                            discipline of study Areas
+                        </h3>
+                        <!-- </header> -->
                         <p class="accelerate-card-description">
                             Lorem ipsum dolor sit amet, consectetur
                             adipiscing elit. Proin euismod urna sit amet
@@ -142,13 +159,13 @@
                         </p>
                     </li>
                 </ul>
-                <article class="partner">
+                <section class="partner">
                     <div class="columns">
-                        <div class="partner-img">
-                            <img src="./assets/images/partner/focus-img.png" alt="Shaking Hands" />
+                        <div class="partner-img focus-img desktop-only">
+                            <img src="./assets/images/focus-img/focus-img-2.jpg" alt="Shaking Hands" />
                         </div>
                     </div>
-                    <div class="columns">
+                    <article class="columns">
                         <header class="partner-header">
                             <h2>Why partner with us?</h2>
                             <p>
@@ -156,6 +173,9 @@
                                 adipiscing elit. Morbi eu arcu id mi
                                 sollicitudin commodo a a augue
                             </p>
+                            <div class="partner-img focus-img mobile-only">
+                                <img src="./assets/images/focus-img/focus-img-2.jpg" alt="Shaking Hands" />
+                            </div>
                         </header>
                         <ul class="partner-list">
                             <li class="partner-list-item">
@@ -181,8 +201,8 @@
                                 your success.
                             </li>
                         </ul>
-                    </div>
-                </article>
+                    </article>
+                </section>
             </div>
         </section>
         <!-- End of Accelerate -->
@@ -202,46 +222,11 @@
                     </button>
                     <button class="tab" data-value="tafe">TAFE</button>
                 </div>
-                <ul class="joined-partners-list">
-                    <li class="joined-partner-item">
-                        <img src="./assets/images/joined-partners/logo-1.png" alt="" />
-                    </li>
-                    <li class="joined-partner-item">
-                        <img src="./assets/images/joined-partners/logo-2.png" alt="" />
-                    </li>
-                    <li class="joined-partner-item">
-                        <img src="./assets/images/joined-partners/logo-3.png" alt="" />
-                    </li>
-                    <li class="joined-partner-item">
-                        <img src="./assets/images/joined-partners/logo-4.png" alt="" />
-                    </li>
-                    <li class="joined-partner-item">
-                        <img src="./assets/images/joined-partners/logo-5.png" alt="" />
-                    </li>
-                    <li class="joined-partner-item">
-                        <img src="./assets/images/joined-partners/logo-6.png" alt="" />
-                    </li>
-                    <li class="joined-partner-item">
-                        <img src="./assets/images/joined-partners/logo-7.png" alt="" />
-                    </li>
-                    <li class="joined-partner-item">
-                        <img src="./assets/images/joined-partners/logo-8.png" alt="" />
-                    </li>
-                    <li class="joined-partner-item">
-                        <img src="./assets/images/joined-partners/logo-9.png" alt="" />
-                    </li>
-                    <li class="joined-partner-item">
-                        <img src="./assets/images/joined-partners/logo-10.png" alt="" />
-                    </li>
-                    <li class="joined-partner-item">
-                        <img src="./assets/images/joined-partners/logo-11.png" alt="" />
-                    </li>
-                    <li class="joined-partner-item">
-                        <img src="./assets/images/joined-partners/logo-12.png" alt="" />
-                    </li>
-                </ul>
+                <ul id="joinedPartnersList" class="joined-partners-list"></ul>
             </div>
         </section>
+        <!-- End of  Joined Partners -->
+        <!-- Partner Testimonials -->
         <section class="partner-testimonials wrapper">
             <div class="content">
                 <div class="partner-testimonials-top">
@@ -282,6 +267,19 @@
                             give advice for a new student like me.Thank you
                             Vee Wahid for a great and friendly assistance.
                         </p>
+                        <a href="#" class="partner-testimonial-card-link">
+                            read more
+                            <svg width="17" height="12" viewBox="0 0 17 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M16.7266 6.00004C16.7266 5.86654 16.6716 5.73904 16.5801 5.64304L11.6306 0.643543C11.4351 0.446043 11.1186 0.446543 10.9236 0.643543C10.7281 0.840543 10.7281 1.16054 10.9236 1.35754L15.0201 5.49504H1.22656C0.950563 5.49504 0.726562 5.72104 0.726562 6.00004C0.726562 6.27904 0.950563 6.50504 1.22656 6.50504H15.0196L10.9236 10.6425C10.7281 10.8395 10.7286 11.1595 10.9236 11.3565C11.1191 11.5535 11.4356 11.5535 11.6306 11.3565L16.5801 6.35704C16.6736 6.26254 16.7251 6.13254 16.7266 6.00004Z"
+                                    fill="#A90466" />
+                            </svg>
+                        </a>
+                        <div class="partner-testimonial-card-reviewer">
+                            <h4>Will Smith</h4>
+                            <span>Head of Department</span>
+                        </div>
                     </li>
                     <li class="partner-testimonial-card">
                         <div class="partner-testimonial-card-img">
@@ -296,6 +294,19 @@
                             give advice for a new student like me.Thank you
                             Vee Wahid for a great and friendly assistance.
                         </p>
+                        <a href="#" class="partner-testimonial-card-link">
+                            read more
+                            <svg width="17" height="12" viewBox="0 0 17 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M16.7266 6.00004C16.7266 5.86654 16.6716 5.73904 16.5801 5.64304L11.6306 0.643543C11.4351 0.446043 11.1186 0.446543 10.9236 0.643543C10.7281 0.840543 10.7281 1.16054 10.9236 1.35754L15.0201 5.49504H1.22656C0.950563 5.49504 0.726562 5.72104 0.726562 6.00004C0.726562 6.27904 0.950563 6.50504 1.22656 6.50504H15.0196L10.9236 10.6425C10.7281 10.8395 10.7286 11.1595 10.9236 11.3565C11.1191 11.5535 11.4356 11.5535 11.6306 11.3565L16.5801 6.35704C16.6736 6.26254 16.7251 6.13254 16.7266 6.00004Z"
+                                    fill="#A90466" />
+                            </svg>
+                        </a>
+                        <div class="partner-testimonial-card-reviewer">
+                            <h4>Will Smith</h4>
+                            <span>Head of Department</span>
+                        </div>
                     </li>
                     <li class="partner-testimonial-card">
                         <div class="partner-testimonial-card-img">
@@ -310,6 +321,19 @@
                             give advice for a new student like me.Thank you
                             Vee Wahid for a great and friendly assistance.
                         </p>
+                        <a href="#" class="partner-testimonial-card-link">
+                            read more
+                            <svg width="17" height="12" viewBox="0 0 17 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M16.7266 6.00004C16.7266 5.86654 16.6716 5.73904 16.5801 5.64304L11.6306 0.643543C11.4351 0.446043 11.1186 0.446543 10.9236 0.643543C10.7281 0.840543 10.7281 1.16054 10.9236 1.35754L15.0201 5.49504H1.22656C0.950563 5.49504 0.726562 5.72104 0.726562 6.00004C0.726562 6.27904 0.950563 6.50504 1.22656 6.50504H15.0196L10.9236 10.6425C10.7281 10.8395 10.7286 11.1595 10.9236 11.3565C11.1191 11.5535 11.4356 11.5535 11.6306 11.3565L16.5801 6.35704C16.6736 6.26254 16.7251 6.13254 16.7266 6.00004Z"
+                                    fill="#A90466" />
+                            </svg>
+                        </a>
+                        <div class="partner-testimonial-card-reviewer">
+                            <h4>Will Smith</h4>
+                            <span>Head of Department</span>
+                        </div>
                     </li>
                     <li class="partner-testimonial-card">
                         <div class="partner-testimonial-card-img">
@@ -324,6 +348,19 @@
                             give advice for a new student like me.Thank you
                             Vee Wahid for a great and friendly assistance.
                         </p>
+                        <a href="#" class="partner-testimonial-card-link">
+                            read more
+                            <svg width="17" height="12" viewBox="0 0 17 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M16.7266 6.00004C16.7266 5.86654 16.6716 5.73904 16.5801 5.64304L11.6306 0.643543C11.4351 0.446043 11.1186 0.446543 10.9236 0.643543C10.7281 0.840543 10.7281 1.16054 10.9236 1.35754L15.0201 5.49504H1.22656C0.950563 5.49504 0.726562 5.72104 0.726562 6.00004C0.726562 6.27904 0.950563 6.50504 1.22656 6.50504H15.0196L10.9236 10.6425C10.7281 10.8395 10.7286 11.1595 10.9236 11.3565C11.1191 11.5535 11.4356 11.5535 11.6306 11.3565L16.5801 6.35704C16.6736 6.26254 16.7251 6.13254 16.7266 6.00004Z"
+                                    fill="#A90466" />
+                            </svg>
+                        </a>
+                        <div class="partner-testimonial-card-reviewer">
+                            <h4>Will Smith</h4>
+                            <span>Head of Department</span>
+                        </div>
                     </li>
                     <li class="partner-testimonial-card">
                         <div class="partner-testimonial-card-img">
@@ -338,11 +375,124 @@
                             give advice for a new student like me.Thank you
                             Vee Wahid for a great and friendly assistance.
                         </p>
+                        <a href="#" class="partner-testimonial-card-link">
+                            read more
+                            <svg width="17" height="12" viewBox="0 0 17 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M16.7266 6.00004C16.7266 5.86654 16.6716 5.73904 16.5801 5.64304L11.6306 0.643543C11.4351 0.446043 11.1186 0.446543 10.9236 0.643543C10.7281 0.840543 10.7281 1.16054 10.9236 1.35754L15.0201 5.49504H1.22656C0.950563 5.49504 0.726562 5.72104 0.726562 6.00004C0.726562 6.27904 0.950563 6.50504 1.22656 6.50504H15.0196L10.9236 10.6425C10.7281 10.8395 10.7286 11.1595 10.9236 11.3565C11.1191 11.5535 11.4356 11.5535 11.6306 11.3565L16.5801 6.35704C16.6736 6.26254 16.7251 6.13254 16.7266 6.00004Z"
+                                    fill="#A90466" />
+                            </svg>
+                        </a>
+                        <div class="partner-testimonial-card-reviewer">
+                            <h4>Will Smith</h4>
+                            <span>Head of Department</span>
+                        </div>
                     </li>
                 </ul>
             </div>
         </section>
-        <!-- End of Leading Institutions -->
+        <!-- End of Partner Testimonials -->
+        <!-- About -->
+        <section class="about wrapper">
+            <div class="content about-content">
+                <div class="column">
+                    <header class="about-header">
+                        <h2>About Scholly</h2>
+                        <p>
+                            Scrolly lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin euismod urna sit amet
+                            ultricies blandit. Praesent bibendum consequat nisi, ut ultricies arcu.
+                        </p>
+                        <div class="about-img focus-img mobile-only">
+                            <img src="./assets/images/focus-img/focus-img-3.png" alt="about" />
+                        </div>
+                    </header>
+                    <div class="about-items-wrapper">
+                        <ul class="about-items">
+                            <li class="about-item">
+                                <span>200+</span>
+                                Education Partners
+                            </li>
+                            <li class="about-item">
+                                <span>1000+</span>
+                                Sucess students
+                            </li>
+                            <li class="about-item">
+                                <span>13+</span>
+                                Office world wide
+                            </li>
+                            <li class="about-item">
+                                <span>350+</span>
+                                Registered expert
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="column desktop-only">
+                    <div class="about-img focus-img">
+                        <img src="./assets/images/focus-img/focus-img-3.png" alt="about" />
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- End of About -->
+        <!-- Partner with us -->
+        <section class="partner-with-us wrapper">
+            <div class="content partner-with-us-content">
+                <div class="column desktop-only">
+                    <div class="partner-with-us-img focus-img">
+                        <img src="./assets/images/focus-img/focus-img-4.jpg" alt="partner with us" />
+                    </div>
+                </div>
+                <div class="column">
+                    <header class="partner-with-us-header">
+                        <h2>Partner with us</h2>
+                        <p>
+                            Partnership opportunities on Scholly helps to growth your business fast
+                        </p>
+                    </header>
+                    <form action="" class="partner-with-us-form">
+                        <div class="input-wrapper">
+                            <label for="first-name">First Name<span class="required">*</span></label>
+                            <input type="text" name="first-name" placeholder="First Name" />
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="last-name">Last name<span class="required">*</span></label>
+                            <input type="text" name="last-name" placeholder="Last Name" />
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="email">Email Address<span class="required">*</span></label>
+                            <input type="email" name="email" inputmode="email" placeholder="Email" />
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="phone-number">Phone Number<span class="required">*</span></label>
+                            <input id="phone" type="text" name="phone-number" inputmode="numeric" placeholder="" />
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="destination-country">Destination Country<span class="required">*</span></label>
+                            <select name="destination-country">
+                                <option value="">Select Country</option>
+                            </select>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="institution-name">Institution Name<span class="required">*</span></label>
+                            <input type="text" name="institution-name" inputmode="numeric"
+                                placeholder="Enter institution-name" />
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="comment">Any comment<span class="required">*</span></label>
+                            <!-- <textarea name="message" id="message"  cols="100" rows="10" -->
+                            <textarea name="message" id="message" placeholder="Enter comment" rows="2"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full btn-xl">Register for Partner
+                            Program</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- End of Partner with us -->
     </main>
     <footer class="footer wrapper">
         <div class="content">
