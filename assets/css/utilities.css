@@ -42,7 +42,7 @@
 }
 
 .input-wrapper {
-    font-family: Inter, "Lato", "sans-serif";
+    font-family: Inter, Lato, "sans-serif";
     label {
         display: block;
         font-size: var(--fs-300);
@@ -67,6 +67,10 @@
         background-color: var(--white-clr);
         border-radius: 0.5rem;
         border: 1px solid #9ba5b7;
+
+        &:focus-visible {
+            outline: 2px solid var(--secondary-clr);
+        }
     }
 
     select {

@@ -1,0 +1,121 @@
+:root {
+    --primary: #111;
+    --secondary: #fd0;
+}
+
+.select-box {
+    position: relative;
+}
+
+.selected {
+    --_input-padding-left: 100px;
+    display: flex;
+    align-items: center;
+    border-radius: 0.5rem;
+
+    input {
+        padding-left: var(--_input-padding-left);
+        text-indent: 0.75rem;
+    }
+}
+
+.iconify {
+    object-fit: contain;
+
+    width: 30px;
+    height: 22px;
+}
+
+.selected-option {
+    min-width: var(--_input-padding-left);
+    cursor: pointer;
+    position: absolute;
+    padding: 0.5rem;
+    display: grid;
+    grid-template-columns: 30px auto;
+    gap: 0.5rem;
+
+    &::after {
+        content: "";
+        inset-block: 0;
+        margin-block: 0.5rem;
+        width: 2px;
+        right: 0;
+        position: absolute;
+        background-color: #d5d5d5;
+    }
+}
+
+.country-code {
+    line-height: 22px;
+    letter-spacing: -2%;
+}
+
+.select-box .country-lists {
+    position: absolute;
+    top: 4rem;
+
+    width: 100%;
+    border-radius: 0.5rem;
+    background-color: var(--white-clr);
+    display: none;
+}
+
+.select-box .country-lists.active {
+    display: block;
+}
+
+.select-box .country-lists::before {
+    content: "";
+    position: absolute;
+    left: 1rem;
+    top: -1.125rem;
+    border: 0.6rem solid transparent;
+    border-bottom-color: var(--secondary-clr);
+}
+
+.select-box .country-search {
+    border: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: 1px solid #d5d5d5;
+    font-size: var(--fs-300);
+    padding: 0.5rem;
+}
+
+.select-box ol {
+    max-height: 23rem;
+    overflow: overlay;
+}
+
+.select-box ol::-webkit-scrollbar {
+    width: 0.6rem;
+}
+
+.select-box ol::-webkit-scrollbar-thumb {
+    width: 0.4rem;
+    height: 3rem;
+    background-color: #ccc;
+    border-radius: 0.4rem;
+}
+
+.select-box .country-item {
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    font-size: var(--fs-300);
+}
+
+.select-box .country-code {
+    margin-left: auto;
+}
+
+.country-item.hide {
+    display: none;
+}
+
+.country-item:hover {
+    background-color: var(--secondary-clr-15);
+}
