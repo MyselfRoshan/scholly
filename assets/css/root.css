@@ -16,6 +16,8 @@
     /* #545760 */
     --text-clr: hsl(225, 7%, 35%);
 
+    /* accent-color: var(--secondary-clr); */
+    accent-color: red;
     /* 40px */
     /* --fs-900: 2.5rem; */
     /* 30px */
@@ -33,6 +35,8 @@
 
     /* 40px */
     --fs-900: clamp(2rem, 2.3vw + 1rem, 2.5rem);
+    /* 36px */
+    --fs-850: clamp(1.5rem, 2.1vw + 1rem, 2.25rem);
     /* 30px */
     --fs-800: clamp(1.5rem, 3vw + 0.2rem, 1.875rem);
 
@@ -71,6 +75,10 @@ h4,
 h5,
 h6 {
     overflow-wrap: break-word;
+}
+
+h2 {
+    text-wrap: balance;
 }
 
 /* Allow percentage-based heights in the application */
@@ -144,4 +152,5 @@ body {
     font-weight: var(--fw-400);
     color: var(--text-clr);
     line-height: 19.2px;
+    /* interpolate-size: allow-keywords; */
 }

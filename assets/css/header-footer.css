@@ -21,6 +21,17 @@
         flex-wrap: nowrap;
         gap: 1rem;
     }
+
+    @media (width <= 600px) {
+        .logo {
+            width: 4.25rem;
+            height: 2rem;
+        }
+
+        .btn {
+            font-size: var(--fs-300);
+        }
+    }
 }
 /* End of Primary Nav */
 
