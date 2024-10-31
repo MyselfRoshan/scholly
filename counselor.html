@@ -18,7 +18,6 @@
   <!-- End of CSS -->
 
   <!-- Script -->
-  <script defer src="./assets/js/faq.js"></script>
   <script defer src="./assets/js/trusted-institutions.js"></script>
   <!-- End of Script -->
 </head>
@@ -109,7 +108,7 @@
     <section class="partner wrapper">
       <div class="content partner-grid">
         <div class="columns">
-          <div class="partner-img">
+          <div class="partner-img focus-img desktop-only">
             <img src="./assets/images/focus-img/focus-img-1.jpg" alt="Shaking Hands" />
           </div>
         </div>
@@ -120,6 +119,9 @@
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
               eu arcu id mi sollicitudin commodo a a augue
             </p>
+            <div class="partner-img focus-img mobile-only">
+              <img src="./assets/images/focus-img/focus-img-1.jpg" alt="Shaking Hands" />
+            </div>
           </header>
           <ul class="partner-list">
             <li class="partner-list-item">
@@ -210,7 +212,7 @@
               Scholly platform
             </p>
           </div>
-          <button class="btn btn-outline btn-md icon ">
+          <button class="btn btn-outline btn-md icon desktop-only">
             <span>View All</span>
             <div class="btn-icon">
               <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -372,6 +374,16 @@
           </li>
 
         </ul>
+        <button class="btn btn-outline btn-md icon mobile-only">
+          <span>View All</span>
+          <div class="btn-icon">
+            <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M6.65456 17.5084C7.06237 17.9167 7.71986 17.9167 8.12767 17.5084L15.0438 10.5834C15.3684 10.2584 15.3684 9.73337 15.0438 9.40837L8.12767 2.48337C7.71986 2.07504 7.06237 2.07504 6.65456 2.48337C6.24675 2.89171 6.24675 3.55004 6.65456 3.95837L12.6802 10L6.64624 16.0417C6.24675 16.4417 6.24675 17.1084 6.65456 17.5084Z"
+                fill="#701B64" />
+            </svg>
+          </div>
+        </button>
       </div>
     </section>
     <!-- End of Counselor -->
@@ -400,48 +412,40 @@
     <section class="faq wrapper">
       <div class="content">
         <h2>Frequently Asked Questions (FAQ)</h2>
-        <ul class="faq-items">
-          <li class="faq-item">
-            <h3 class="faq-question">1. How to apply?</h3>
-            <div class="faq-answer">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin euismod urna sit amet ultricies blandit.
-                Praesent bibendum consequat nisi, ut ultricies arcu. Morbi id nulla eget justo pharetra.</p>
-            </div>
-          </li>
-          <li class="faq-item">
-            <h3 class="faq-question">2. What are the requirements?</h3>
-            <div class="faq-answer">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin euismod urna sit amet ultricies blandit.
-                Praesent bibendum consequat nisi, ut ultricies arcu. Morbi id nulla eget justo pharetra.Lorem ipsum
-                dolor sit amet.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin euismod urna sit amet
-                ultricies blandit. Praesent bibendum consequat nisi, ut ultricies arcu. Morbi id nulla eget justo
-                pharetra.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-                euismod urna sit amet ultricies blandit. Praesent bibendum consequat nisi, ut ultricies arcu. Morbi id
-                nulla eget justo pharetra.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consectetur adipiscing
-                elit. Proin euismod urna sit amet ultricies blandit. Praesent bibendum consequat nisi, ut ultricies
-                arcu. Morbi id nulla eget justo pharetra.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit. Proin euismod urna sit amet ultricies blandit. Praesent bib</p>
-            </div>
-          </li>
-          <li class="faq-item">
-            <h3 class="faq-question">3. What licenses and certifications do I have to need?</h3>
-            <div class="faq-answer">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-          </li>
-          <li class="faq-item">
-            <h3 class="faq-question">4. Can I associated with multiple Educational Institutions?</h3>
-            <div class="faq-answer">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-          </li>
-          <li class="faq-item">
-            <h3 class="faq-question">5. Is it free or I need to pay for to apply as counselor?</h3>
-            <div class="faq-answer">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-          </li>
-        </ul>
+        <div class="faq-items">
+          <details class="faq-item" name="faq-item">
+            <summary class="faq-question">How to apply?</summary>
+            <p class="faq-answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin euismod urna sit amet
+              ultricies blandit.
+              Praesent bibendum consequat nisi, ut ultricies arcu. Morbi id nulla eget justo pharetra.</p>
+          </details>
+          <details class="faq-item" name="faq-item">
+            <summary class="faq-question">What are the requirements?</summary>
+            <p class="faq-answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin euismod urna sit amet
+              ultricies blandit.
+              Praesent bibendum consequat nisi, ut ultricies arcu. Morbi id nulla eget justo pharetra.Lorem ipsum
+              dolor sit amet.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin euismod urna sit amet
+              ultricies blandit. Praesent bibendum consequat nisi, ut ultricies arcu. Morbi id nulla eget justo
+              pharetra.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+              euismod urna sit amet ultricies blandit. Praesent bibendum consequat nisi, ut ultricies arcu. Morbi id
+              nulla eget justo pharetra.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consectetur adipiscing
+              elit. Proin euismod urna sit amet ultricies blandit. Praesent bibendum consequat nisi, ut ultricies
+              arcu. Morbi id nulla eget justo pharetra.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit. Proin euismod urna sit amet ultricies blandit. Praesent bib</p>
+          </details>
+          <details class="faq-item" name="faq-item">
+            <summary class="faq-question">What licenses and certifications do I have to need?</summary>
+            <p class="faq-answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </details>
+          <details class="faq-item" name="faq-item">
+            <summary class="faq-question">Can I associated with multiple Educational Institutions?</summary>
+            <p class="faq-answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </details>
+          <details class="faq-item" name="faq-item">
+            <summary class="faq-question">Is it free or I need to pay for to apply as counselor?</summary>
+            <p class="faq-answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </details>
+        </div>
     </section>
     <!-- End of FAQ -->
   </main>

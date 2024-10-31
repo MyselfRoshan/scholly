@@ -16,6 +16,8 @@
     /* #545760 */
     --text-clr: hsl(225, 7%, 35%);
 
+    /* accent-color: var(--secondary-clr); */
+    accent-color: red;
     /* 40px */
     /* --fs-900: 2.5rem; */
     /* 30px */

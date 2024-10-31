@@ -269,75 +269,15 @@ const countries = [
     { name: "Zambia", code: "ZM", phone: 260 },
     { name: "Zimbabwe", code: "ZW", phone: 263 },
 ]
-//     selectBox = document.querySelector(".country-lists"),
-//     searchBox = document.querySelector(".country-search"),
-//     inputBox = document.querySelector('input[type="tel"]'),
-//     selectedOption = document.querySelector(".selected-option")
 
-// let countryItems = null
-
-// for (country of countries) {
-//     const countryItem = `
-//     <li class="country-item">
-//             <span class="iconify" data-icon="flag:${country.code.toLowerCase()}-4x3"></span>
-//             <span class="country-name">${country.name}</span>
-//             <span class="country-code">+${country.phone}</span>
-//     </li> `
-
-//     selectBox.querySelector("ol").insertAdjacentHTML("beforeend", countryItem)
-//     countryItems = document.querySelectorAll(".country-item")
-// }
-
-// function selectOption() {
-//     console.log(this)
-//     const icon = this.querySelector(".iconify").cloneNode(true),
-//         phone_code = this.querySelector(".country-code").cloneNode(true)
-
-//     selectedOption.innerHTML = ""
-//     selectedOption.append(icon, phone_code)
-
-//     selectBox.classList.remove("active")
-//     selectedOption.classList.remove("active")
-
-//     searchBox.value = ""
-//     selectBox
-//         .querySelectorAll(".hide")
-//         .forEach(el => el.classList.remove("hide"))
-// }
-
-// function searchCountry() {
-//     let search_query = searchBox.value.toLowerCase()
-//     for (option of countryItems) {
-//         let is_matched1 = option
-//             .querySelector(".country-name")
-//             .innerText.toLowerCase()
-//             .includes(search_query)
-
-//         // let is_matched2 = option
-//         //     .querySelector(".country-code")
-//         //     .includes(search_query)
-//         let is_matched = is_matched1
-//         option.classList.toggle("hide", !is_matched)
-//     }
-// }
-
-// selectedOption.addEventListener("click", () => {
-//     selectBox.classList.toggle("active")
-//     selectedOption.classList.toggle("active")
-// })
-
-// countryItems.forEach(option => option.addEventListener("click", selectOption))
-// searchBox.addEventListener("input", searchCountry)
-
-// New
-const selectBox = document.querySelector(".country-lists")
+const dialog = document.querySelector(".country-lists-dialog")
 const searchBox = document.querySelector(".country-search")
 const inputBox = document.querySelector('input[type="tel"]')
 const selectedOption = document.querySelector(".selected-option")
 
 // Render country items in the dropdown
 function renderCountryItems() {
-    const countryList = selectBox.querySelector("ol")
+    const countryList = dialog.querySelector("ol")
     countryList.innerHTML = countries
         .map(
             country => `
@@ -352,50 +292,56 @@ function renderCountryItems() {
 }
 
 // Select option and update the selected display
-function selectOption() {
-    const icon = this.querySelector(".iconify").cloneNode(true)
-    const phoneCode = this.querySelector(".country-code").cloneNode(true)
+function selectOption(option, countryItems) {
+    console.log(option.querySelector(".country-code"))
+    const icon = option.querySelector(".iconify").cloneNode(true)
+    const phoneCode = option.querySelector(".country-code").cloneNode(true)
 
     selectedOption.innerHTML = ""
     selectedOption.append(icon, phoneCode)
 
-    selectBox.classList.remove("active")
-    selectedOption.classList.remove("active")
+    dialog.close()
     searchBox.value = ""
-    resetCountryListVisibility()
-}
-
-// Reset country list visibility
-function resetCountryListVisibility() {
+    // Reset country list visibility
     countryItems.forEach(item => item.classList.remove("hide"))
 }
 
 // Search for countries
-function searchCountry() {
+function searchCountry(countryItems) {
     const searchQuery = searchBox.value.toLowerCase()
-    countryItems.forEach(option => {
+    for (const option of countryItems) {
         const countryName = option
             .querySelector(".country-name")
             .innerText.toLowerCase()
-        option.classList.toggle("hide", !countryName.includes(searchQuery))
-    })
+        const countryCode = option.querySelector(".country-code").innerText
+        const filter =
+            countryName.includes(searchQuery) ||
+            countryCode.includes(searchQuery)
+        option.classList.toggle("hide", !filter)
+    }
 }
 
 // Initialize country items and event listeners
 function init() {
     renderCountryItems()
-    countryItems = document.querySelectorAll(".country-item")
+    const countryItems = document.querySelectorAll(".country-item")
 
-    selectedOption.addEventListener("click", () => {
-        selectBox.classList.toggle("active")
-        selectedOption.classList.toggle("active")
+    selectedOption.addEventListener("click", e => {
+        e.preventDefault()
+        dialog.show()
+    })
+
+    document.addEventListener("click", e => {
+        if (!selectedOption.contains(e.target) && !dialog.contains(e.target))
+            dialog.close()
     })
 
     countryItems.forEach(option =>
-        option.addEventListener("click", selectOption),
+        option.addEventListener("click", () =>
+            selectOption(option, countryItems),
+        ),
     )
-    searchBox.addEventListener("input", searchCountry)
+    searchBox.addEventListener("input", () => searchCountry(countryItems))
 }
 
-// Call init function to set everything up
 init()

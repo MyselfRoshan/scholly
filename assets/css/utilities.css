@@ -251,13 +251,13 @@ h2 {
 
 @media (width <= 1024px) {
     .desktop-only {
-        display: none;
+        display: none !important;
     }
 }
 
 @media (width > 1024px) {
     .mobile-only {
-        display: none;
+        display: none !important;
     }
 }
 /* End of Utilities */

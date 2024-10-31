@@ -464,18 +464,21 @@
                             <label for="phone-number">Phone Number<span class="required">*</span></label>
                             <div class="select-box">
                                 <div class="selected">
-                                    <div class="selected-option">
+                                    <button class="selected-option">
                                         <span class="iconify" data-icon="flag:au-4x3"></span>
                                         <span class="country-code">+61</span>
-                                    </div>
+                                    </button>
                                     <input type="tel" name="phone-number" placeholder="" inputmode="numeric">
                                 </div>
-                                <div class="country-lists">
+
+                                <dialog class="country-lists-dialog">
+                                    <!-- <div class="country-lists-dialog"> -->
                                     <input type="text" class="country-search" placeholder="Search Country Name or Code">
                                     <ol>
 
                                     </ol>
-                                </div>
+                                    <!-- </div> -->
+                                </dialog>
                             </div>
                         </div>
                         <div class="input-wrapper">
