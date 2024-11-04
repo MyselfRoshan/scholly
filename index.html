@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homepage</title>
+
+    <!-- Font -->
+    <link href="./assets/css/fonts.css" rel="stylesheet" type="text/css" />
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <!-- End of Font -->
+
+    <!-- CSS -->
+    <link href="./assets/css/root.css" rel="stylesheet" type="text/css" />
+    <link href="./assets/css/utilities.css" rel="stylesheet" type="text/css" />
+    <link href="./assets/css/header-footer.css" rel="stylesheet" type="text/css" />
+    <link href="./assets/css/main.css" rel="stylesheet" type="text/css" />
+    <!-- <link href="./assets/css/partner.css" rel="stylesheet" type="text/css" /> -->
+    <!-- End of CSS -->
+
+    <!-- Script -->
+    <script defer src="./assets/js/faq.js"></script>
+    <script defer src="./assets/js/courses-tabs.js"></script>
+    <!-- End of Script -->
+</head>
+
+<body>
+    <!-- Popup -->
+    <!-- End of Popup -->
+    <dialog open="true" id="reviewDialog">
+        <div class="dialog-header">
+            <h2 class="dialog-title">Glasgow Caledonian University - Review</h2>
+            <button class="close-button" id="closeDialog">&times;</button>
+        </div>
+
+        <div class="dialog-content">
+            <div class="university-info">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/gcu-logo-placeholder.png"
+                    alt="Glasgow Caledonian University Logo" class="university-logo">
+                <div class="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item">
+                            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/campus-image-1.jpg"
+                                alt="Campus View 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/campus-image-2.jpg"
+                                alt="Campus View 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/campus-image-3.jpg"
+                                alt="Campus View 3">
+                        </div>
+                    </div>
+                    <button class="carousel-control prev">&lt;</button>
+                    <button class="carousel-control next">&gt;</button>
+                </div>
+            </div>
+
+            <p class="review-text">
+                Schooly help me find the right path of my career and them also very
+                heartwarming to assist and give advice for a new student like me.
+                Thank you Vee Wahid for a great and friendly assistance.
+            </p>
+        </div>
+
+        <div class="dialog-footer">
+            <div class="interaction-buttons">
+                <button class="interaction-button">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path
+                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                    </svg>
+                    2
+                </button>
+                <button class="interaction-button">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                    </svg>
+                    3
+                </button>
+            </div>
+            <!-- <button class="interaction-button helpful-button">Helpful</button> -->
+        </div>
+    </dialog>
+    <!-- Header -->
+    <header class="primary-header wrapper">
+        <div class="content topbar">
+            <div class="topbar-contacts">
+                <a href="tel:+619846210550" class="topbar-contact-details">
+                    <div class="topbar-contact-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M19.9834 15.9791V18.3877C19.9843 18.6113 19.9385 18.8327 19.849 19.0375C19.7594 19.2424 19.628 19.4263 19.4632 19.5775C19.2985 19.7286 19.1039 19.8437 18.8921 19.9154C18.6803 19.987 18.4558 20.0136 18.2331 19.9935C15.7625 19.725 13.3894 18.8808 11.3043 17.5286C9.36438 16.2959 7.71968 14.6512 6.48699 12.7113C5.1301 10.6168 4.28568 8.23206 4.02214 5.75036C4.00208 5.52834 4.02846 5.30457 4.09962 5.0933C4.17078 4.88203 4.28514 4.6879 4.43544 4.52325C4.58573 4.35861 4.76867 4.22706 4.97259 4.13699C5.17651 4.04691 5.39695 4.00029 5.61988 4.00008H8.02852C8.41817 3.99624 8.79591 4.13422 9.09135 4.3883C9.38678 4.64237 9.57975 4.99521 9.63429 5.38103C9.73595 6.15185 9.92449 6.9087 10.1963 7.63713C10.3043 7.9245 10.3277 8.23682 10.2637 8.53707C10.1996 8.83732 10.0509 9.11292 9.83501 9.33121L8.81535 10.3509C9.95829 12.3609 11.6226 14.0252 13.6326 15.1682L14.6523 14.1485C14.8706 13.9326 15.1462 13.7839 15.4464 13.7198C15.7467 13.6558 16.059 13.6792 16.3464 13.7872C17.0748 14.059 17.8317 14.2476 18.6025 14.3492C18.9925 14.4042 19.3487 14.6007 19.6033 14.9012C19.8579 15.2017 19.9932 15.5853 19.9834 15.9791Z"
+                                stroke="var(--secondary-clr)" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </svg>
+                    </div>
+                    <div class="topbar-contact-text">
+                        +61 9846210550
+                    </div>
+                </a>
+                <a href="mailto:info@lakhbatti.com" class="topbar-contact-details">
+                    <div class="topbar-contact-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17.5385 18.7692H6.46154C5.10769 18.7692 4 17.6615 4 16.3077V7.69231C4 6.33847 5.10769 5.23077 6.46154 5.23077H17.5385C18.8923 5.23077 20 6.33847 20 7.69231V16.3077C20 17.6615 18.8923 18.7692 17.5385 18.7692Z"
+                                stroke="var(--secondary-clr)" stroke-width="1.5" stroke-miterlimit="10"
+                                stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M4 8.30768L12 13.2308L20 8.30768" stroke="var(--secondary-clr)" stroke-width="1.5"
+                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </div>
+                    <div class="topbar-contact-text">
+                        info@lakhbatti.com
+                    </div>
+                </a>
+                <a class="topbar-contact-details">
+                    <div class="topbar-contact-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20Z"
+                                stroke="var(--secondary-clr)" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                            <path d="M12 7.63635V12L14.9091 14.9091" stroke="var(--secondary-clr)" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </div>
+                    <div class="topbar-contact-text">
+                        Mon - Fri: 9:00 am - 5:00 pm
+                    </div>
+                </a>
+            </div>
+            <div class="full-width topbar-social">
+                <div class="topbar-social-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_3046_3304)">
+                            <path
+                                d="M0 12C0 5.3726 5.3726 0 12 0C18.6274 0 24 5.3726 24 12C24 18.6274 18.6274 24 12 24C5.3726 24 0 18.6274 0 12Z"
+                                fill="white"></path>
+                            <path
+                                d="M13.2509 19.0557V12.5271H15.0531L15.292 10.2773H13.2509L13.254 9.15125C13.254 8.56445 13.3098 8.25005 14.1526 8.25005H15.2792V6H13.4768C11.3117 6 10.5497 7.0914 10.5497 8.9268V10.2775H9.2002V12.5274H10.5497V19.0557H13.2509Z"
+                                fill="var(--secondary-clr)"></path>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_3046_3304">
+                                <rect width="24" height="24" fill="white"></rect>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="topbar-social-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_3046_3307)">
+                            <path
+                                d="M0 12C0 5.3726 5.3726 0 12 0C18.6274 0 24 5.3726 24 12C24 18.6274 18.6274 24 12 24C5.3726 24 0 18.6274 0 12Z"
+                                fill="white"></path>
+                            <path
+                                d="M11.6406 9.75376L11.6658 10.169L11.2461 10.1182C9.71845 9.92326 8.38385 9.26226 7.25065 8.15216L6.6967 7.60136L6.554 8.00811C6.2518 8.91486 6.44485 9.87241 7.0744 10.5164C7.41015 10.8724 7.3346 10.9232 6.75545 10.7114C6.554 10.6436 6.3777 10.5927 6.36095 10.6181C6.3022 10.6775 6.50365 11.4486 6.6631 11.7537C6.88135 12.1774 7.3262 12.5926 7.81305 12.8383L8.22435 13.0332L7.7375 13.0417C7.26745 13.0417 7.25065 13.0502 7.30105 13.2281C7.4689 13.7789 8.132 14.3637 8.87065 14.6179L9.3911 14.7958L8.9378 15.067C8.2663 15.4568 7.4773 15.6771 6.6883 15.6941C6.31055 15.7026 6 15.7364 6 15.7619C6 15.8466 7.02405 16.3212 7.62 16.5076C9.40785 17.0584 11.5315 16.8211 13.1263 15.8805C14.2594 15.2111 15.3926 13.8806 15.9214 12.5926C16.2068 11.9062 16.4922 10.652 16.4922 10.0504C16.4922 9.66056 16.5174 9.60971 16.9874 9.14366C17.2644 8.87246 17.5246 8.57586 17.575 8.49116C17.6589 8.33016 17.6505 8.33016 17.2225 8.47421C16.509 8.72841 16.4082 8.69451 16.7608 8.31321C17.021 8.04201 17.3316 7.55051 17.3316 7.40646C17.3316 7.38106 17.2057 7.42341 17.063 7.49966C16.9119 7.58441 16.5762 7.71151 16.3243 7.78781L15.871 7.93186L15.4598 7.65221C15.2332 7.49966 14.9141 7.33021 14.7463 7.27936C14.3182 7.16071 13.6635 7.17766 13.2774 7.31326C12.2281 7.69461 11.5651 8.67756 11.6406 9.75376Z"
+                                fill="var(--secondary-clr)"></path>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_3046_3307">
+                                <rect width="24" height="24" fill="white"></rect>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="topbar-social-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_3046_3310)">
+                            <path
+                                d="M0 12C0 5.3726 5.3726 0 12 0C18.6274 0 24 5.3726 24 12C24 18.6274 18.6274 24 12 24C5.3726 24 0 18.6274 0 12Z"
+                                fill="white"></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M8.65901 7.41135C8.65901 8.1959 8.06846 8.82365 7.12021 8.82365H7.10281C6.18986 8.82365 5.59961 8.1959 5.59961 7.41135C5.59961 6.6102 6.20781 6 7.13811 6C8.06846 6 8.64136 6.6102 8.65901 7.41135ZM8.47986 9.9389V18.1098H5.76041V9.9389H8.47986ZM18.2872 18.1098L18.2873 13.4249C18.2873 10.9152 16.9457 9.74705 15.1562 9.74705C13.7123 9.74705 13.0659 10.5401 12.705 11.0964V9.93915H9.98516C10.021 10.7058 9.98516 18.11 9.98516 18.11H12.705V13.5467C12.705 13.3025 12.7226 13.0589 12.7945 12.8841C12.9911 12.3962 13.4386 11.8911 14.1899 11.8911C15.1743 11.8911 15.5679 12.6403 15.5679 13.7383V18.1098H18.2872Z"
+                                fill="var(--secondary-clr)"></path>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_3046_3310">
+                                <rect width="24" height="24" fill="white"></rect>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <nav class="content primary-nav">
+            <div class="logo">
+                <img src="./assets/images/logo.png" alt="Scholly" width="100" />
+            </div>
+
+            <div class="btns">
+                <button class="btn btn-outline-secondary">Log In</button>
+                <button class="btn btn-tertiary">
+                    Register
+                </button>
+            </div>
+        </nav>
+    </header>
+    <!-- End of Header -->
+    <main>
+        <!-- Hero -->
+        <section class="hero wrapper">
+            <div class="content hero-content">
+                <header class="hero-header">
+                    <h1>Find your perfect course to define your future.</h1>
+                    <p>Scholly simplifies the admissions process for the world class Australian institutions</p>
+                </header>
+                <div class="hero-search">
+                    <label for="search" aria-label="Search" class="search-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M9.33909 18.6782C11.6169 18.6782 13.6877 17.8706 15.3028 16.5039L22.5505 23.7515C22.7161 23.9172 22.9232 24 23.151 24C23.3788 24 23.5858 23.9172 23.7515 23.7515C24.0828 23.4202 24.0828 22.8818 23.7515 22.5505L16.5039 15.3028C17.8499 13.6877 18.6782 11.5962 18.6782 9.33909C18.6782 4.18292 14.4953 0 9.33909 0C4.20362 0 0 4.20362 0 9.33909C0 14.4953 4.20362 18.6782 9.33909 18.6782ZM9.33909 1.69802C13.5634 1.69802 16.9802 5.13546 16.9802 9.33909C16.9802 13.5634 13.5634 16.9802 9.33909 16.9802C5.11475 16.9802 1.69802 13.5427 1.69802 9.33909C1.69802 5.13546 5.13546 1.69802 9.33909 1.69802Z"
+                                fill="#6F6F6F" />
+                        </svg>
+                    </label>
+                    <input id="search" type="search" placeholder="search for a course" />
+                    <button class="btn btn-primary">Search</button>
+                </div>
+                <ul class="hero-cards">
+
+                    <li>
+                        <figure class="hero-card">
+                            <div class="hero-img">
+                                <svg width="24" height="23" viewBox="0 0 24 23" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4.30728 15.9414H2.64062V18.4147H4.30728V15.9414Z" fill="#545760" />
+                                    <path d="M4.30728 11.4805H2.64062V13.9538H4.30728V11.4805Z" fill="#545760" />
+                                    <path d="M10.9515 9.82031H8.67188V12.2937H10.9515V9.82031Z" fill="#545760" />
+                                    <path d="M10.9515 5.3584H8.67188V7.83174H10.9515V5.3584Z" fill="#545760" />
+                                    <path d="M11.5582 14.3291H8.67188V19.484H11.5582V14.3291Z" fill="#545760" />
+                                    <path d="M21.36 15.9414H19.6934V18.4147H21.36V15.9414Z" fill="#545760" />
+                                    <path d="M21.36 11.4805H19.6934V13.9538H21.36V11.4805Z" fill="#545760" />
+                                    <path d="M15.3285 9.82031H13.0488V12.2937H15.3285V9.82031Z" fill="#545760" />
+                                    <path d="M15.3285 5.3584H13.0488V7.83174H15.3285V5.3584Z" fill="#545760" />
+                                    <path d="M15.3277 14.3291H12.4414V19.484H15.3277V14.3291Z" fill="#545760" />
+                                    <path
+                                        d="M18.2194 7.49045V2.85621L12 0L5.78061 2.85622V7.49046H0V22.7932H24V7.49045H18.2194ZM5.78061 21.24H1.16493V8.65537H5.78061V21.24ZM17.0545 21.24H6.94553V3.60306L12 1.28185L17.0545 3.60306V21.24ZM22.8351 21.24H18.2194V8.65537H22.8351V21.24Z"
+                                        fill="#545760" />
+                                </svg>
+
+                            </div>
+                            <figcaption>
+                                <h3>3k+ Institution</h3>
+                                <p>Explore world class Australian
+                                    Colleges/Universities </p>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure class="hero-card">
+                            <div class="hero-img">
+                                <svg width="24" height="23" viewBox="0 0 24 23" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4.30728 15.9414H2.64062V18.4147H4.30728V15.9414Z" fill="#545760" />
+                                    <path d="M4.30728 11.4805H2.64062V13.9538H4.30728V11.4805Z" fill="#545760" />
+                                    <path d="M10.9515 9.82031H8.67188V12.2937H10.9515V9.82031Z" fill="#545760" />
+                                    <path d="M10.9515 5.3584H8.67188V7.83174H10.9515V5.3584Z" fill="#545760" />
+                                    <path d="M11.5582 14.3291H8.67188V19.484H11.5582V14.3291Z" fill="#545760" />
+                                    <path d="M21.36 15.9414H19.6934V18.4147H21.36V15.9414Z" fill="#545760" />
+                                    <path d="M21.36 11.4805H19.6934V13.9538H21.36V11.4805Z" fill="#545760" />
+                                    <path d="M15.3285 9.82031H13.0488V12.2937H15.3285V9.82031Z" fill="#545760" />
+                                    <path d="M15.3285 5.3584H13.0488V7.83174H15.3285V5.3584Z" fill="#545760" />
+                                    <path d="M15.3277 14.3291H12.4414V19.484H15.3277V14.3291Z" fill="#545760" />
+                                    <path
+                                        d="M18.2194 7.49045V2.85621L12 0L5.78061 2.85622V7.49046H0V22.7932H24V7.49045H18.2194ZM5.78061 21.24H1.16493V8.65537H5.78061V21.24ZM17.0545 21.24H6.94553V3.60306L12 1.28185L17.0545 3.60306V21.24ZM22.8351 21.24H18.2194V8.65537H22.8351V21.24Z"
+                                        fill="#545760" />
+                                </svg>
+
+                            </div>
+                            <figcaption>
+                                <h3>5k+ Courses</h3>
+                                <p>Explore world class Australian
+                                    Colleges/Universities</p>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure class="hero-card">
+                            <div class="hero-img">
+                                <svg width="24" height="23" viewBox="0 0 24 23" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4.30728 15.9414H2.64062V18.4147H4.30728V15.9414Z" fill="#545760" />
+                                    <path d="M4.30728 11.4805H2.64062V13.9538H4.30728V11.4805Z" fill="#545760" />
+                                    <path d="M10.9515 9.82031H8.67188V12.2937H10.9515V9.82031Z" fill="#545760" />
+                                    <path d="M10.9515 5.3584H8.67188V7.83174H10.9515V5.3584Z" fill="#545760" />
+                                    <path d="M11.5582 14.3291H8.67188V19.484H11.5582V14.3291Z" fill="#545760" />
+                                    <path d="M21.36 15.9414H19.6934V18.4147H21.36V15.9414Z" fill="#545760" />
+                                    <path d="M21.36 11.4805H19.6934V13.9538H21.36V11.4805Z" fill="#545760" />
+                                    <path d="M15.3285 9.82031H13.0488V12.2937H15.3285V9.82031Z" fill="#545760" />
+                                    <path d="M15.3285 5.3584H13.0488V7.83174H15.3285V5.3584Z" fill="#545760" />
+                                    <path d="M15.3277 14.3291H12.4414V19.484H15.3277V14.3291Z" fill="#545760" />
+                                    <path
+                                        d="M18.2194 7.49045V2.85621L12 0L5.78061 2.85622V7.49046H0V22.7932H24V7.49045H18.2194ZM5.78061 21.24H1.16493V8.65537H5.78061V21.24ZM17.0545 21.24H6.94553V3.60306L12 1.28185L17.0545 3.60306V21.24ZM22.8351 21.24H18.2194V8.65537H22.8351V21.24Z"
+                                        fill="#545760" />
+                                </svg>
+
+                            </div>
+                            <figcaption>
+                                <h3>1k+ Verified Experts</h3>
+                                <p>Get expert help so you
+                                    don’t waste your time</p>
+                            </figcaption>
+                        </figure>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- End of Hero -->
+        <!-- Courses -->
+        <section class="courses wrapper">
+            <div class="courses-content content ">
+                <div class="courses-tabs">
+                    <button class="tab tab-active" data-value="recommended">
+                        Recommended Courses
+                    </button>
+                    <button class="tab" data-value="top_popular">
+                        Top Popular Courses
+                    </button>
+                    <div class="slide"></div>
+                </div>
+
+                <ul id="coursesList" class="courses-list">
+                    <li class="course-item">
+                        <div class="course-img">
+                            <img src="./assets/images/courses/course-1.svg" alt="" />
+                        </div>
+                        <h3 class="course-title">Science</h3>
+                        <p class="course-availability">
+                            123
+                            <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect y="0.5" width="12" height="12" fill="white" />
+                                <path
+                                    d="M3.88365 10.2255L7.60963 6.50045L3.8832 2.77537C3.7056 2.59777 3.7056 2.31046 3.8832 2.13286C4.0608 1.95571 4.34855 1.95571 4.52615 2.13286L8.57361 6.17897C8.75121 6.35612 8.75121 6.64388 8.57361 6.82103L4.52615 10.8671C4.34855 11.0443 4.06035 11.0443 3.88275 10.8671C3.70605 10.6904 3.70605 10.4027 3.88365 10.2255Z"
+                                    fill="#262F45" />
+                            </svg>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- End of Courses -->
+        <!-- Counselor -->
+        <section class="counselor wrapper">
+            <div class="content">
+                <header class="counselor-header">
+                    <div class="">
+                        <h2>Connect to our counselor</h2>
+                        <p>
+                            Always listen to an expert!
+                        </p>
+                    </div>
+                    <button class="btn btn-outline btn-sm icon desktop-only">
+                        <span>Get started</span>
+                        <div class="btn-icon">
+                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M6.65456 17.5084C7.06237 17.9167 7.71986 17.9167 8.12767 17.5084L15.0438 10.5834C15.3684 10.2584 15.3684 9.73337 15.0438 9.40837L8.12767 2.48337C7.71986 2.07504 7.06237 2.07504 6.65456 2.48337C6.24675 2.89171 6.24675 3.55004 6.65456 3.95837L12.6802 10L6.64624 16.0417C6.24675 16.4417 6.24675 17.1084 6.65456 17.5084Z"
+                                    fill="#701B64" />
+                            </svg>
+                        </div>
+                    </button>
+                </header>
+                <div class="counselor-figures">
+                    <figure class="counselor-figure">
+                        <div class="counselor-figure-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M23.25 19.5C22.8 19.5 22.5 19.2 22.5 18.75V9C22.5 8.55 22.8 8.25 23.25 8.25C23.7 8.25 24 8.55 24 9V18.75C24 19.2 23.7 19.5 23.25 19.5Z"
+                                    fill="white" />
+                                <path
+                                    d="M12 15.7499C11.85 15.7499 11.775 15.7499 11.625 15.6749L0.375 9.6749C0.15 9.5249 0 9.2999 0 8.9999C0 8.6999 0.15 8.4749 0.375 8.3249L11.625 2.3249C11.85 2.1749 12.075 2.1749 12.3 2.3249L23.55 8.3249C23.775 8.4749 23.925 8.6999 23.925 8.9999C23.925 9.2999 23.775 9.5249 23.55 9.6749L12.3 15.6749C12.225 15.7499 12.15 15.7499 12 15.7499Z"
+                                    fill="white" />
+                                <path
+                                    d="M13.05 16.9502C12.75 17.1752 12.375 17.2502 12 17.2502C11.625 17.2502 11.25 17.1752 10.95 16.9502L4.5 13.5752V16.5002C4.5 18.8252 8.175 21.0002 12 21.0002C15.825 21.0002 19.5 18.8252 19.5 16.5002V13.5752L13.05 16.9502Z"
+                                    fill="white" />
+                            </svg>
+                        </div>
+                        <figcaption class="counselor-figcaption">
+                            Having many years of
+                            experience.
+                        </figcaption>
+                    </figure>
+                    <figure class="counselor-figure">
+                        <div class="counselor-figure-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M23.25 19.5C22.8 19.5 22.5 19.2 22.5 18.75V9C22.5 8.55 22.8 8.25 23.25 8.25C23.7 8.25 24 8.55 24 9V18.75C24 19.2 23.7 19.5 23.25 19.5Z"
+                                    fill="white" />
+                                <path
+                                    d="M12 15.7499C11.85 15.7499 11.775 15.7499 11.625 15.6749L0.375 9.6749C0.15 9.5249 0 9.2999 0 8.9999C0 8.6999 0.15 8.4749 0.375 8.3249L11.625 2.3249C11.85 2.1749 12.075 2.1749 12.3 2.3249L23.55 8.3249C23.775 8.4749 23.925 8.6999 23.925 8.9999C23.925 9.2999 23.775 9.5249 23.55 9.6749L12.3 15.6749C12.225 15.7499 12.15 15.7499 12 15.7499Z"
+                                    fill="white" />
+                                <path
+                                    d="M13.05 16.9502C12.75 17.1752 12.375 17.2502 12 17.2502C11.625 17.2502 11.25 17.1752 10.95 16.9502L4.5 13.5752V16.5002C4.5 18.8252 8.175 21.0002 12 21.0002C15.825 21.0002 19.5 18.8252 19.5 16.5002V13.5752L13.05 16.9502Z"
+                                    fill="white" />
+                            </svg>
+                        </div>
+                        <figcaption class="counselor-figcaption">
+                            Expert from 30+ cities
+                            ready to guide you.
+                        </figcaption>
+                    </figure>
+                    <figure class="counselor-figure">
+                        <div class="counselor-figure-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M23.25 19.5C22.8 19.5 22.5 19.2 22.5 18.75V9C22.5 8.55 22.8 8.25 23.25 8.25C23.7 8.25 24 8.55 24 9V18.75C24 19.2 23.7 19.5 23.25 19.5Z"
+                                    fill="white" />
+                                <path
+                                    d="M12 15.7499C11.85 15.7499 11.775 15.7499 11.625 15.6749L0.375 9.6749C0.15 9.5249 0 9.2999 0 8.9999C0 8.6999 0.15 8.4749 0.375 8.3249L11.625 2.3249C11.85 2.1749 12.075 2.1749 12.3 2.3249L23.55 8.3249C23.775 8.4749 23.925 8.6999 23.925 8.9999C23.925 9.2999 23.775 9.5249 23.55 9.6749L12.3 15.6749C12.225 15.7499 12.15 15.7499 12 15.7499Z"
+                                    fill="white" />
+                                <path
+                                    d="M13.05 16.9502C12.75 17.1752 12.375 17.2502 12 17.2502C11.625 17.2502 11.25 17.1752 10.95 16.9502L4.5 13.5752V16.5002C4.5 18.8252 8.175 21.0002 12 21.0002C15.825 21.0002 19.5 18.8252 19.5 16.5002V13.5752L13.05 16.9502Z"
+                                    fill="white" />
+                            </svg>
+                        </div>
+                        <figcaption class="counselor-figcaption">
+                            Well trained counselor
+                            to make your journey success.
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="counselor-info">
+                </div>
+                <ul class="counselor-list">
+                    <li class="counselor-card">
+                        <div class="counselor-card-bg-img">
+                            <svg width="122" height="318" viewBox="0 0 122 318" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M41.1355 62.4336C47.5498 42.3857 127.706 14.17 166.982 2.56822L172.419 0.916262C173.703 0.52589 175 1.48719 175 2.82988V320.183C175 321.248 174.166 322.126 173.103 322.18L2.41011 331.007C1.15835 331.072 0.149201 330.034 0.318287 328.792C11.488 246.748 34.7821 82.291 41.1355 62.4336Z"
+                                    fill="#C2D2F8" fill-opacity="0.4" />
+                            </svg>
+                        </div>
+                        <header class="counselor-card-header">
+                            <div class="counselor-img">
+                                <img src="./assets/images/counselor/profile-1.png" alt="" />
+                            </div>
+                            <div class="counselor-info">
+                                <h3 class="counselor-name">David John Doe</h3>
+                                <div class="counselor-country">
+                                    <div class="counselor-country-flag">
+                                        <img src="./assets/images/counselor/australia.svg" alt="australia" />
+                                    </div>
+                                    <span class="counselor-country-name">Australia</span>
+                                </div>
+                                <p class="counselor-languages">Spanish, English, Japanese</p>
+                            </div>
+                        </header>
+                        <div class="counselor-details">
+                            <h4 class="counselor-university">ATMC - Federation University</h4>
+                            <p class="counselor-expertise">Master in Information Techology</p>
+                        </div>
+                        <ul class="tags">
+                            <li class="tag">Hospitality</li>
+                            <li class="tag">Hotel Management</li>
+                            <li class="tag">Hospitality</li>
+                            <li class="tag">Marketing</li>
+                            <li class="tag">SEO Expert</li>
+                            <li class="tag">IT Developer</li>
+                        </ul>
+                        <button class="btn btn-full btn-primary counselor-btn">Connect to Expert</button>
+                    </li>
+                    <li class="counselor-card">
+                        <div class="counselor-card-bg-img">
+                            <svg width="122" height="318" viewBox="0 0 122 318" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M41.1355 62.4336C47.5498 42.3857 127.706 14.17 166.982 2.56822L172.419 0.916262C173.703 0.52589 175 1.48719 175 2.82988V320.183C175 321.248 174.166 322.126 173.103 322.18L2.41011 331.007C1.15835 331.072 0.149201 330.034 0.318287 328.792C11.488 246.748 34.7821 82.291 41.1355 62.4336Z"
+                                    fill="#EFEBFD" fill-opacity="0.7" />
+                            </svg>
+                        </div>
+                        <header class="counselor-card-header">
+                            <div class="counselor-img">
+                                <img src="./assets/images/counselor/profile-2.png" alt="" />
+                            </div>
+                            <div class="counselor-info">
+                                <h3 class="counselor-name">David John Doe</h3>
+                                <div class="counselor-country">
+                                    <div class="counselor-country-flag">
+                                        <img src="./assets/images/counselor/bangladesh.svg" alt="australia" />
+                                    </div>
+                                    <span class="counselor-country-name">Australia</span>
+                                </div>
+                                <p class="counselor-languages">Spanish, English, Japanese</p>
+                            </div>
+                        </header>
+                        <div class="counselor-details">
+                            <h4 class="counselor-university">ATMC - Federation University</h4>
+                            <p class="counselor-expertise">Master in Information Techology</p>
+                        </div>
+                        <ul class="tags">
+                            <li class="tag">Hospitality</li>
+                            <li class="tag">Hotel Management</li>
+                            <li class="tag">Hospitality</li>
+                            <li class="tag">Marketing</li>
+                            <li class="tag">SEO Expert</li>
+                            <li class="tag">IT Developer</li>
+                        </ul>
+                        <button class="btn btn-full btn-primary counselor-btn">Connect to Expert</button>
+                    </li>
+                    <li class="counselor-card">
+                        <div class="counselor-card-bg-img">
+                            <svg width="122" height="318" viewBox="0 0 122 318" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M41.1355 62.4336C47.5498 42.3857 127.706 14.17 166.982 2.56822L172.419 0.916262C173.703 0.52589 175 1.48719 175 2.82988V320.183C175 321.248 174.166 322.126 173.103 322.18L2.41011 331.007C1.15835 331.072 0.149201 330.034 0.318287 328.792C11.488 246.748 34.7821 82.291 41.1355 62.4336Z"
+                                    fill="#FCF1CF" fill-opacity="0.5" />
+                            </svg>
+                        </div>
+                        <header class="counselor-card-header">
+                            <div class="counselor-img">
+                                <img src="./assets/images/counselor/profile-3.png" alt="" />
+                            </div>
+                            <div class="counselor-info">
+                                <h3 class="counselor-name">David John Doe</h3>
+                                <div class="counselor-country">
+                                    <div class="counselor-country-flag">
+                                        <img src="./assets/images/counselor/thailand.svg" alt="australia" />
+                                    </div>
+                                    <span class="counselor-country-name">Australia</span>
+                                </div>
+                                <p class="counselor-languages">Spanish, English, Japanese</p>
+                            </div>
+                        </header>
+                        <div class="counselor-details">
+                            <h4 class="counselor-university">ATMC - Federation University</h4>
+                            <p class="counselor-expertise">Master in Information Techology</p>
+                        </div>
+                        <ul class="tags">
+                            <li class="tag">Hospitality</li>
+                            <li class="tag">Hotel Management</li>
+                            <li class="tag">Hospitality</li>
+                            <li class="tag">Marketing</li>
+                            <li class="tag">SEO Expert</li>
+                            <li class="tag">IT Developer</li>
+                        </ul>
+                        <button class="btn btn-full btn-primary counselor-btn">Connect to Expert</button>
+                    </li>
+                    <li class="counselor-card">
+                        <div class="counselor-card-bg-img">
+                            <svg width="122" height="318" viewBox="0 0 122 318" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M41.1355 62.4336C47.5498 42.3857 127.706 14.17 166.982 2.56822L172.419 0.916262C173.703 0.52589 175 1.48719 175 2.82988V320.183C175 321.248 174.166 322.126 173.103 322.18L2.41011 331.007C1.15835 331.072 0.149201 330.034 0.318287 328.792C11.488 246.748 34.7821 82.291 41.1355 62.4336Z"
+                                    fill="#C6FDE5" fill-opacity="0.55" />
+                            </svg>
+                        </div>
+                        <header class="counselor-card-header">
+                            <div class="counselor-img">
+                                <img src="./assets/images/counselor/profile-4.png" alt="" />
+                            </div>
+                            <div class="counselor-info">
+                                <h3 class="counselor-name">David John Doe</h3>
+                                <div class="counselor-country">
+                                    <div class="counselor-country-flag">
+                                        <img src="./assets/images/counselor/korea.svg" alt="australia" />
+                                    </div>
+                                    <span class="counselor-country-name">Australia</span>
+                                </div>
+                                <p class="counselor-languages">Spanish, English, Japanese</p>
+                            </div>
+                        </header>
+                        <div class="counselor-details">
+                            <h4 class="counselor-university">ATMC - Federation University</h4>
+                            <p class="counselor-expertise">Master in Information Techology</p>
+                        </div>
+                        <ul class="tags">
+                            <li class="tag">Hospitality</li>
+                            <li class="tag">Hotel Management</li>
+                            <li class="tag">Hospitality</li>
+                            <li class="tag">Marketing</li>
+                            <li class="tag">SEO Expert</li>
+                            <li class="tag">IT Developer</li>
+                        </ul>
+                        <button class="btn btn-full btn-primary counselor-btn">Connect to Expert</button>
+                    </li>
+
+                </ul>
+
+                <button class="btn btn-outline btn-sm icon mobile-only">
+                    <span>Get started</span>
+                    <div class="btn-icon">
+                        <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M6.65456 17.5084C7.06237 17.9167 7.71986 17.9167 8.12767 17.5084L15.0438 10.5834C15.3684 10.2584 15.3684 9.73337 15.0438 9.40837L8.12767 2.48337C7.71986 2.07504 7.06237 2.07504 6.65456 2.48337C6.24675 2.89171 6.24675 3.55004 6.65456 3.95837L12.6802 10L6.64624 16.0417C6.24675 16.4417 6.24675 17.1084 6.65456 17.5084Z"
+                                fill="#701B64" />
+                        </svg>
+                    </div>
+                </button>
+            </div>
+        </section>
+        <!-- End of Counselor -->
+        <!-- Works -->
+        <section class="works wrapper">
+            <div class="content">
+                <header class="works-header">
+                    <div class="">
+                        <h2>How scholly Works ?</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu arcu id mi sollicitudin
+                            commodo a a augue.
+                        </p>
+                    </div>
+
+                    <button class="btn btn-outline btn-sm icon desktop-only">
+                        <span>Find your counselor</span>
+                        <div class="btn-icon">
+                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M6.65456 17.5084C7.06237 17.9167 7.71986 17.9167 8.12767 17.5084L15.0438 10.5834C15.3684 10.2584 15.3684 9.73337 15.0438 9.40837L8.12767 2.48337C7.71986 2.07504 7.06237 2.07504 6.65456 2.48337C6.24675 2.89171 6.24675 3.55004 6.65456 3.95837L12.6802 10L6.64624 16.0417C6.24675 16.4417 6.24675 17.1084 6.65456 17.5084Z"
+                                    fill="#701B64" />
+                            </svg>
+                        </div>
+                    </button>
+                </header>
+                <ul class="works-cards">
+                    <li class="works-card">
+                        <header class="works-card-header">
+                            <div class="works-card-img">
+                                <img src="./assets/images/start/card-5.svg" alt="" />
+                                <h3 class="works-card-title">Search your course</h3>
+                            </div>
+                        </header>
+                        <p class="works-card-description">
+                            A course usually covers an individual subject. Courses generally have a fixed program of
+                            sessions every week during the term, called lessons or classes.
+                        </p>
+                    </li>
+                    <li class="works-card">
+                        <header class="works-card-header">
+                            <div class="works-card-img">
+                                <img src="./assets/images/start/card-1.svg" alt="" />
+                                <h3 class="works-card-title">Signup & create profile</h3>
+                            </div>
+                        </header>
+                        <p class="works-card-description">
+                            A course usually covers an individual subject. Courses generally have a fixed program of
+                            sessions every week during the term, called lessons or classes.
+                        </p>
+                    </li>
+                    <li class="works-card">
+                        <header class="works-card-header">
+                            <div class="works-card-img">
+                                <img src="./assets/images/start/card-3.svg" alt="" />
+                                <h3 class="works-card-title">Get expert help </h3>
+                            </div>
+                        </header>
+                        <p class="works-card-description">
+                            A course usually covers an individual subject. Courses generally have a fixed program of
+                            sessions every week during the term, called lessons or classes.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- End of Works -->
+
+    </main>
+    <!-- Footer -->
+    <footer class="footer wrapper">
+        <div class="content">
+            <div class="footer-top">
+                <div class="columns footer-contact">
+                    <div class="company-logo">
+                        <img src="./assets/images/logo-white.png" alt="Scholly" width="81" height="38" />
+                    </div>
+                    <p class="footer-description">
+                        Scholly, an Australian based EdTech, a unique
+                        platform to empower the international student
+                        recruitment industry by providing tools, expertise,
+                        premium support and connecting educational
+                        institutions with vetted recruitment partners and
+                        students in leading and emerging source countries.
+                    </p>
+                    <a href="/contact-us" class="footer-list-item">
+                        <div class="footer-list-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="12" fill="#701B64" />
+                                <path
+                                    d="M15.7726 15.1045L12.944 17.9331C12.8203 18.057 12.6734 18.1552 12.5117 18.2222C12.35 18.2892 12.1767 18.3237 12.0016 18.3237C11.8266 18.3237 11.6533 18.2892 11.4916 18.2222C11.3299 18.1552 11.183 18.057 11.0593 17.9331L8.22997 15.1045C7.48412 14.3586 6.9762 13.4083 6.77043 12.3737C6.56466 11.3392 6.6703 10.2668 7.07397 9.29229C7.47765 8.31777 8.16124 7.48483 9.03829 6.89881C9.91535 6.31279 10.9465 6 12.0013 6C13.0561 6 14.0873 6.31279 14.9643 6.89881C15.8414 7.48483 16.525 8.31777 16.9286 9.29229C17.3323 10.2668 17.4379 11.3392 17.2322 12.3737C17.0264 13.4083 16.5185 14.3586 15.7726 15.1045V15.1045Z"
+                                    stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M14 11.334C14 11.8644 13.7893 12.3731 13.4142 12.7482C13.0391 13.1233 12.5304 13.334 12 13.334C11.4696 13.334 10.9609 13.1233 10.5858 12.7482C10.2107 12.3731 10 11.8644 10 11.334C10 10.8036 10.2107 10.2948 10.5858 9.91977C10.9609 9.5447 11.4696 9.33398 12 9.33398C12.5304 9.33398 13.0391 9.5447 13.4142 9.91977C13.7893 10.2948 14 10.8036 14 11.334V11.334Z"
+                                    stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <span class="footer-list-text">
+                            Queensland, Australia
+                        </span>
+                    </a>
+                    <a href="tel:0902222234" class="footer-list-item">
+                        <div class="footer-list-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="12" fill="#701B64" />
+                                <g clip-path="url(#clip0_4307_11154)">
+                                    <path
+                                        d="M5.5 8.5C5.5 14.0227 9.97733 18.5 15.5 18.5H17C17.3978 18.5 17.7794 18.342 18.0607 18.0607C18.342 17.7794 18.5 17.3978 18.5 17V16.0853C18.5 15.7413 18.266 15.4413 17.932 15.358L14.9833 14.6207C14.69 14.5473 14.382 14.6573 14.2013 14.8987L13.5547 15.7607C13.3667 16.0113 13.042 16.122 12.748 16.014C11.6566 15.6128 10.6654 14.9791 9.84319 14.1568C9.02094 13.3346 8.38725 12.3434 7.986 11.252C7.878 10.958 7.98867 10.6333 8.23933 10.4453L9.10133 9.79867C9.34333 9.618 9.45267 9.30933 9.37933 9.01667L8.642 6.068C8.60143 5.9058 8.50781 5.7618 8.37604 5.65889C8.24426 5.55598 8.08187 5.50006 7.91467 5.5H7C6.60218 5.5 6.22064 5.65804 5.93934 5.93934C5.65804 6.22064 5.5 6.60218 5.5 7V8.5Z"
+                                        stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_4307_11154">
+                                        <rect width="16" height="16" fill="white" transform="translate(4 4)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                        <span class="footer-list-text">090-222-2234</span>
+                    </a>
+                </div>
+
+                <div class="columns footer-popular-services">
+                    <h2 class="footer-title">Solutions</h2>
+                    <a href="#" class="footer-links">Student</a>
+                    <a href="#" class="footer-links"> Counsellors </a>
+                    <a href="#" class="footer-links">Agencies</a>
+                    <a href="#" class="footer-links">Providers</a>
+                </div>
+                <div class="columns footer-about">
+                    <h2 class="footer-title">About us</h2>
+                    <a href="#" class="footer-links">About Us</a>
+                    <a href="#" class="footer-links"> Blog / Articles </a>
+                    <a href="#" class="footer-links">FAQ's</a>
+                    <a href="#" class="footer-links">Contact Us</a>
+                </div>
+
+                <div class="columns footer-quick-links">
+                    <h2 class="footer-title">Quick Links</h2>
+                    <a href="#" class="footer-links"> Universities </a>
+                    <a href="#" class="footer-links">Courses</a>
+                    <a href="#" class="footer-links">Resources</a>
+                </div>
+                <!-- </div> -->
+            </div>
+            <div class="footer-socials">
+                <span class="footer-socials-line"></span>
+                <div class="footer-social-links">
+                    <a href="https://www.facebook.com" class="footer-social-link"><svg width="32" height="32"
+                            viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="16" cy="16" r="16" fill="var(--secondary-clr)" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M20.2861 8.11317V10.638L18.7831 10.642C17.605 10.642 17.378 11.2 17.378 12.0156V13.8224H20.1844L19.8203 16.6478H17.378V24H14.4506V16.6478H12V13.8224H14.4506V11.7385C14.4506 9.31902 15.9297 8 18.0982 8C19.1319 8 20.0239 8.07805 20.2861 8.11317Z"
+                                fill="white" />
+                        </svg>
+                    </a>
+                    <a href="https://www.x.com" class="footer-social-link">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="16" cy="16" r="16" fill="white" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M13.032 22.7377C19.0696 22.7377 22.372 17.8365 22.372 13.5866C22.372 13.4471 22.372 13.3086 22.3624 13.1707C23.0048 12.7161 23.5592 12.1516 24 11.5058C23.4016 11.766 22.7656 11.9367 22.1152 12.0119C22.8 11.6098 23.3128 10.9781 23.5584 10.2327C22.9136 10.6073 22.2088 10.8718 21.4736 11.0136C20.2304 9.71878 18.1512 9.65605 16.8288 10.8741C15.9768 11.6595 15.6144 12.8304 15.8792 13.9474C13.24 13.8173 10.7808 12.5961 9.1136 10.5872C8.2424 12.0568 8.688 13.9362 10.1304 14.8799C9.608 14.865 9.0968 14.7272 8.64 14.478V14.5188C8.6408 16.0496 9.7424 17.3677 11.2736 17.671C10.7904 17.8003 10.2832 17.8191 9.792 17.7258C10.2216 19.0364 11.4544 19.934 12.8584 19.9598C11.696 20.855 10.26 21.341 8.7816 21.3394C8.5208 21.3387 8.26 21.3237 8 21.2932C9.5016 22.2369 11.248 22.7377 13.032 22.7354"
+                                fill="var(--secondary-clr)" />
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com" class="footer-social-link"><svg width="32" height="32"
+                            viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="16" cy="16" r="16" fill="var(--secondary-clr)" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M24 24H20.8V18.4008C20.8 16.8648 20.1224 16.0078 18.9072 16.0078C17.5848 16.0078 16.8 16.9008 16.8 18.4008V24H13.6V13.6H16.8V14.7695C16.8 14.7695 17.804 13.0078 20.0664 13.0078C22.3296 13.0078 24 14.3889 24 17.2465V24ZM9.9536 11.9367C8.8744 11.9367 8 11.0552 8 9.96797C8 8.88157 8.8744 8 9.9536 8C11.032 8 11.9064 8.88157 11.9064 9.96797C11.9072 11.0552 11.032 11.9367 9.9536 11.9367ZM8 24H12V13.6H8V24Z"
+                                fill="white" />
+                        </svg>
+                    </a>
+                    <a href="https://www.youtube.com" class="footer-social-link">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="16" cy="16" r="16" fill="var(--secondary-clr)" />
+                            <path
+                                d="M23.6651 11.7599C23.5787 11.4148 23.4027 11.0985 23.155 10.8432C22.9073 10.5878 22.5966 10.4023 22.2542 10.3054C21.0034 10 16 10 16 10C16 10 10.9966 10 9.74578 10.3345C9.40343 10.4314 9.09271 10.6169 8.84499 10.8723C8.59727 11.1276 8.42133 11.4439 8.33494 11.789C8.10602 13.0584 7.99404 14.3462 8.00042 15.6361C7.99226 16.9357 8.10424 18.2332 8.33494 19.5122C8.43018 19.8467 8.61006 20.1509 8.8572 20.3954C9.10434 20.64 9.41039 20.8168 9.74578 20.9085C10.9966 21.2431 16 21.2431 16 21.2431C16 21.2431 21.0034 21.2431 22.2542 20.9085C22.5966 20.8117 22.9073 20.6262 23.155 20.3708C23.4027 20.1154 23.5787 19.7992 23.6651 19.4541C23.8922 18.1942 24.0042 16.9162 23.9996 15.6361C24.0077 14.3365 23.8958 13.0389 23.6651 11.7599Z"
+                                stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M14.3633 18.0139L18.5449 15.6359L14.3633 13.2578V18.0139Z" stroke="white"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-links">
+                    <a href="#" class="terms-of-use">Terms of use</a>
+                    <a href="#" class="cookie-policy">Cookie policy</a>
+                </div>
+                <small class="footer-copyright">
+                    Copyright &copy; 2022 Scholly. All Rights Reserved.
+                </small>
+            </div>
+        </div>
+    </footer>
+    <!-- End of Footer -->
+</body>
+
+</html>

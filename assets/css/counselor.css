@@ -320,7 +320,10 @@
 /* End of Start */
 /* Counselor */
 .counselor {
-    padding-block: 4.375rem;
+    /* padding-block: 4.375rem; */
+    /* padding-blo
+    apc
+    k: c; */
 
     @media (width <= 1024px) {
         .btn {

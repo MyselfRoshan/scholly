@@ -291,6 +291,7 @@
         }
     }
 }
+
 .joined-partners-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -567,6 +568,22 @@
 .partner-with-us {
     padding-block: 4.375rem;
     background-color: hsl(300, 11%, 96%);
+
+    @media (width > 1024px) {
+        position: relative;
+        isolation: isolate;
+
+        &::before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            width: 400px;
+            height: 518px;
+            left: 0;
+            bottom: 0;
+            background-image: url("../images/dotted-pattern.svg");
+        }
+    }
 }
 
 .partner-with-us-content {
