@@ -59,14 +59,14 @@ const createJoinedPartnerItem = imgSrc => {
 }
 
 const updateJoinedPartnersList = activeTabValue => {
-    joinedPartnersList.innerHTML = ""
-    const partners = joinedPartners.find(
+    coursesList.innerHTML = ""
+    const partners = courses.find(
         partner => Object.keys(partner)[0] === activeTabValue,
     )
     if (partners) {
         partners[activeTabValue].img.forEach(imgSrc => {
             const item = createJoinedPartnerItem(imgSrc)
-            joinedPartnersList.appendChild(item)
+            coursesList.appendChild(item)
         })
     }
 }

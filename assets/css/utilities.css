@@ -105,12 +105,6 @@
     text-wrap: nowrap;
     transition: all 180ms ease;
 
-    &.btn-outline {
-        --_btn-clr: var(--white-clr);
-        --_btn-txt-clr: var(--tertiary-clr);
-        border: 1px solid var(--_btn-txt-clr);
-    }
-
     &:hover {
         color: var(--_btn-clr, var(--primary-clr));
         background-color: var(--_btn-txt-clr, var(--white-clr));
@@ -127,6 +121,17 @@
         }
     }
 
+    &.btn-outline {
+        --_btn-clr: var(--white-clr);
+        --_btn-txt-clr: var(--tertiary-clr);
+        border: 1px solid var(--_btn-txt-clr);
+    }
+
+    &.btn-outline-secondary {
+        --_btn-clr: var(--white-clr);
+        --_btn-txt-clr: var(--secondary-clr);
+        border: 1px solid var(--_btn-txt-clr);
+    }
     &.btn-primary {
         font-weight: var(--fw-500);
         --_btn-clr: var(--primary-clr);
@@ -166,6 +171,10 @@
         }
     }
 
+    &.btn-sm {
+        padding: 0.5rem 0.75rem;
+    }
+
     &.btn-md {
         padding-inline: 1.625rem;
     }
@@ -181,6 +190,7 @@
     &.btn-full {
         width: 100%;
     }
+
     &.btn-partner {
         border: none;
         border-bottom: 2px solid var(--secondary-clr);
