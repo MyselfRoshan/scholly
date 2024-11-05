@@ -4,6 +4,8 @@
 
 # TODO
 
--   [ ] Responsive in hero, partner, start and advantage section
--   [ ] Look for Swier package for carousel slider
+-   [ ] Look for Swiper package for carousel slider
 -   [ ] Popover model in partner page
+-   [ ] Convert html to cshtml
+-   [ ] Develop Providers page
+-   [ ] Finish Home page
