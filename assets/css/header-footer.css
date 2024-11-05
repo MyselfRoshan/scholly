@@ -1,3 +1,74 @@
+/* Topbar */
+.topbar {
+    /* Full width background */
+    border-image-source: conic-gradient(var(--tertiary-clr) 0% 0%);
+    border-image-slice: fill 0;
+    border-image-outset: 0 100vw;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+
+    @media (width <=890px) {
+        display: none;
+    }
+}
+
+.topbar-contacts {
+    --_topbar-contacts-gap: 1rem;
+    display: flex;
+    gap: var(--_topbar-contacts-gap);
+}
+
+.topbar-contact-details {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: var(--white-clr);
+    text-decoration: none;
+
+    &:not(:last-of-type) {
+        padding-right: var(--_topbar-contacts-gap);
+        border-right: 1px solid var(--white-clr);
+    }
+    &:hover {
+        .topbar-contact-icon {
+            scale: 1.2;
+            transition: all 180ms ease-in-out;
+        }
+    }
+}
+
+.topbar-contact-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    transition: all 180ms ease-in-out;
+}
+
+.topbar-contact-text {
+    font-weight: var(--fw-400);
+    font-size: var(--fs-300);
+}
+
+.topbar-social {
+    display: flex;
+    gap: 1rem;
+}
+
+.topbar-social-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    transition: scale 180ms ease-in-out;
+
+    &:hover {
+        transition: scale 180ms ease-in-out;
+        scale: 1.2;
+    }
+}
+
+/* End of Topbar */
+
 /* Primay Nav */
 .primary-nav {
     display: flex;

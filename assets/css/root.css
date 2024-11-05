@@ -109,8 +109,7 @@ a:not([class]) {
     text-decoration-skip-ink: auto;
 }
 
-a.primary-nav__link,
-a.nav-link {
+a {
     text-decoration: none;
 }
 

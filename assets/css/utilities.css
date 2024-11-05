@@ -43,6 +43,7 @@
 
 .input-wrapper {
     font-family: Inter, Lato, "sans-serif";
+    --_input-wrapper-padding: 0.75rem;
     label {
         display: block;
         font-size: var(--fs-300);
@@ -61,7 +62,7 @@
     select,
     textarea {
         width: 100%;
-        padding: 0.75rem;
+        padding: var(--_input-wrapper-padding);
         line-height: 22px;
         letter-spacing: -2%;
         background-color: var(--white-clr);
@@ -90,6 +91,31 @@
     option {
         color: var(--text-clr);
     }
+
+    &.password-wrapper {
+        --_toggle-password-offset: 1.5rem;
+        position: relative;
+
+        &:focus-within {
+            .toggle-password {
+                color: var(--secondary-clr);
+            }
+        }
+
+        input {
+            padding-right: calc(
+                2 * var(--_input-wrapper-padding) +
+                    var(--_toggle-password-offset)
+            );
+        }
+        .toggle-password {
+            position: absolute;
+            width: 1.5rem;
+            aspect-ratio: 1;
+            bottom: var(--_input-wrapper-padding);
+            right: var(--_input-wrapper-padding);
+        }
+    }
 }
 
 .btn {
@@ -104,6 +130,10 @@
     font-weight: var(--fw-700);
     text-wrap: nowrap;
     transition: all 180ms ease;
+
+    a {
+        all: unset;
+    }
 
     &:hover {
         color: var(--_btn-clr, var(--primary-clr));
@@ -132,6 +162,7 @@
         --_btn-txt-clr: var(--secondary-clr);
         border: 1px solid var(--_btn-txt-clr);
     }
+
     &.btn-primary {
         font-weight: var(--fw-500);
         --_btn-clr: var(--primary-clr);
