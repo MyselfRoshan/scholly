@@ -16,8 +16,6 @@
     /* #545760 */
     --text-clr: hsl(225, 7%, 35%);
 
-    /* accent-color: var(--secondary-clr); */
-    accent-color: red;
     /* 40px */
     /* --fs-900: 2.5rem; */
     /* 30px */
@@ -50,7 +48,7 @@
     --fw-800: 800;
     --fw-900: 900;
 
-    accent-color: red;
+    accent-color: var(--secondary-clr);
 }
 
 /* Box sizing rules*/

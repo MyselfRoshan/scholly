@@ -1,2 +1,9 @@
 */**/demo/*
 scholly-main/*
+node_modules/*
+.vscode/*
+extension-output-*
+extension-output-*
+*.log
+*.log
+*/**/.DS_Store
