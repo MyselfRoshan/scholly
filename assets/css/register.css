@@ -1,0 +1,143 @@
+.link {
+    color: var(--primary-clr);
+    transition: all 180ms ease;
+    display: block;
+    &:hover {
+        scale: 1.05;
+        color: var(--secondary-clr);
+    }
+}
+
+.register {
+    padding-block: clamp(2.25rem, 7vw, 4.375rem);
+    position: relative;
+    background-color: #f9f2f74d;
+
+    &::after {
+        content: "";
+        background-image: url("../images/dotted-pattern.svg");
+        position: absolute;
+        display: block;
+        height: 318px;
+        aspect-ratio: 1.62;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+}
+
+.register-content {
+    border-radius: 0.75rem;
+    background-color: var(--white-clr);
+    box-shadow: 0 2px 4px hsla(0, 0%, 0%, 0.07);
+
+    display: grid;
+
+    @media (width<=600px) {
+        .column:last-of-type {
+            display: none;
+        }
+    }
+
+    @media (600px<width <= 1024px) {
+        grid-template-rows: 352px 1fr;
+
+        .column:last-of-type {
+            grid-row: 1;
+        }
+
+        .register-img img {
+            border-top-left-radius: 0.75rem;
+            border-top-right-radius: 0.75rem;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    @media (width > 1024px) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .column:first-of-type {
+        padding: 2rem 2.5rem;
+    }
+}
+
+.register-header {
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    line-height: 24px;
+
+    h1 {
+        color: var(--black-clr);
+        font-size: var(--fs-800);
+        font-weight: var(--fw-500);
+    }
+
+    @media (width <= 1164px) {
+        grid-template-rows: auto auto;
+
+        .register-footer {
+            grid-row: 1;
+            margin-bottom: 2rem;
+        }
+    }
+    @media (width > 1164px) {
+        grid-template-columns: 1fr auto;
+        column-gap: 1rem;
+    }
+}
+
+.register-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+}
+
+.register-form {
+    margin-top: 1.5rem;
+    display: grid;
+    gap: 1.5rem;
+    font-family: Inter, "Lato", "sans-serif";
+
+    @media (width>600px) {
+        grid-template-columns: 1fr 1fr;
+        > .input-wrapper:nth-of-type(3),
+        > .input-wrapper:nth-of-type(5),
+        > .input-wrapper:nth-of-type(6),
+        .btn {
+            grid-column: span 2;
+        }
+
+        fieldset .input-wrapper:nth-of-type(1) {
+            grid-column: span 2;
+        }
+    }
+
+    fieldset {
+        border: none;
+        display: contents;
+    }
+
+    .btn {
+        margin-top: 1rem;
+        justify-items: stretch;
+    }
+}
+
+.register-img {
+    width: 100%;
+    height: 100%;
+    /* border-radius: 0.75rem; */
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-top-right-radius: 0.75rem;
+        border-bottom-right-radius: 0.75rem;
+    }
+}

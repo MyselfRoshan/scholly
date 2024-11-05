@@ -49,6 +49,8 @@
     --fw-700: 700;
     --fw-800: 800;
     --fw-900: 900;
+
+    accent-color: red;
 }
 
 /* Box sizing rules*/
