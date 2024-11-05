@@ -182,6 +182,12 @@
         border: 1px solid var(--_btn-txt-clr);
     }
 
+    &.btn-outline-primary {
+        --_btn-clr: var(--white-clr);
+        --_btn-txt-clr: var(--primary-clr);
+        border: 1px solid var(--_btn-txt-clr);
+    }
+
     &.btn-outline-secondary {
         --_btn-clr: var(--white-clr);
         --_btn-txt-clr: var(--secondary-clr);

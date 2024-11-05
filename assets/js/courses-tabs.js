@@ -125,8 +125,6 @@ tabs.forEach((tab, index) => {
 
         const { offsetWidth, offsetLeft } = tab
 
-        // slide.style.width = `${offsetWidth}px`
-        // slide.style.left = `${offsetLeft}px`
         slider.style.setProperty("--_slide-width", offsetWidth + "px")
         slider.style.setProperty("--_slide-left", offsetLeft + "px")
 
@@ -138,5 +136,9 @@ tabs.forEach((tab, index) => {
 // Initial load
 const initialActiveTab = document.querySelector(".tab-active")
 if (initialActiveTab) {
+    const { offsetWidth, offsetLeft } = initialActiveTab
+    slider.style.setProperty("--_slide-width", offsetWidth + "px")
+    slider.style.setProperty("--_slide-left", offsetLeft + "px")
+
     updateJoinedPartnersList(initialActiveTab.dataset.value)
 }
