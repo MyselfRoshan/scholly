@@ -25,9 +25,13 @@
   <!-- End of CSS -->
 
   <!-- Script -->
-  <script defer src="./assets/js/faq.js"></script>
   <script defer src="./assets/js/courses-tabs.js"></script>
   <!-- End of Script -->
+
+  <!-- Trusted Institutions Slider -->
+  <link rel="stylesheet" href="./node_modules/swiper/swiper-bundle.min.css" />
+  <script defer type="module" src="./assets/js/trusted-institutions-2.js"></script>
+  <!-- End of Trusted Institutions -->
 </head>
 
 <body>
@@ -56,7 +60,9 @@
                 stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
             </svg>
           </div>
-          <div class="topbar-contact-text">info@lakhbatti.com</div>
+          <div class="topbar-contact-text">
+            info@lakhbatti.com
+          </div>
         </a>
         <a class="topbar-contact-details">
           <div class="topbar-contact-icon">
@@ -68,7 +74,9 @@
                 stroke-linecap="round" stroke-linejoin="round"></path>
             </svg>
           </div>
-          <div class="topbar-contact-text">Mon - Fri: 9:00 am - 5:00 pm</div>
+          <div class="topbar-contact-text">
+            Mon - Fri: 9:00 am - 5:00 pm
+          </div>
         </a>
       </div>
       <div class="full-width topbar-social">
@@ -132,14 +140,10 @@
 
       <div class="btns">
         <button class="btn btn-outline-secondary">
-          <a href="./signin.html">
-            Log In
-          </a>
+          <a href="./signin.html"> Log In </a>
         </button>
         <button class="btn btn-tertiary">
-          <a href="./register.html">
-            Register
-          </a>
+          <a href="./register.html"> Register </a>
         </button>
       </div>
     </nav>
@@ -152,8 +156,8 @@
         <header class="hero-header">
           <h1>Find your perfect course to define your future.</h1>
           <p>
-            Scholly simplifies the admissions process for the world class
-            Australian institutions
+            Scholly simplifies the admissions process for the
+            world class Australian institutions
           </p>
         </header>
         <div class="hero-search">
@@ -189,7 +193,10 @@
               </div>
               <figcaption>
                 <h3>3k+ Institution</h3>
-                <p>Explore world class Australian Colleges/Universities</p>
+                <p>
+                  Explore world class Australian
+                  Colleges/Universities
+                </p>
               </figcaption>
             </figure>
           </li>
@@ -214,7 +221,10 @@
               </div>
               <figcaption>
                 <h3>5k+ Courses</h3>
-                <p>Explore world class Australian Colleges/Universities</p>
+                <p>
+                  Explore world class Australian
+                  Colleges/Universities
+                </p>
               </figcaption>
             </figure>
           </li>
@@ -239,7 +249,10 @@
               </div>
               <figcaption>
                 <h3>1k+ Verified Experts</h3>
-                <p>Get expert help so you don’t waste your time</p>
+                <p>
+                  Get expert help so you don’t waste your
+                  time
+                </p>
               </figcaption>
             </figure>
           </li>
@@ -247,6 +260,7 @@
       </div>
     </section>
     <!-- End of Hero -->
+
     <!-- Courses -->
     <section class="courses wrapper">
       <div class="courses-content content">
@@ -280,6 +294,290 @@
       </div>
     </section>
     <!-- End of Courses -->
+
+    <!-- Trusted Institutions -->
+    <section class="wrapper trusted">
+      <div class="breakout-left trusted-content">
+        <div class="breakout-left trusted-content">
+          <div class="column">
+            <div class="trusted-focus-img">
+              <img src="./assets/images/focus-img/focus-img-6.jpg" alt="Scholly" />
+            </div>
+          </div>
+          <div class="column">
+            <header class="trusted-header">
+              <h2>
+                Trusted by 1100+ Australian Institutions
+              </h2>
+            </header>
+            <p class="trusted-description">
+              Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit. Morbi eu arcu id mi
+              sollicitudin commodo a a augue.
+            </p>
+            <!-- <div class="abc"> -->
+
+            <div class="trusted-institutions-btns">
+              <button id="prevInstitutions" class="left">
+                <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M6.65456 17.5084C7.06237 17.9167 7.71986 17.9167 8.12767 17.5084L15.0438 10.5834C15.3684 10.2584 15.3684 9.73337 15.0438 9.40837L8.12767 2.48337C7.71986 2.07504 7.06237 2.07504 6.65456 2.48337C6.24675 2.89171 6.24675 3.55004 6.65456 3.95837L12.6802 10L6.64624 16.0417C6.24675 16.4417 6.24675 17.1084 6.65456 17.5084Z"
+                    fill="currentColor"></path>
+                </svg>
+              </button>
+              <button id="nextInstitutions" class="right">
+                <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M6.65456 17.5084C7.06237 17.9167 7.71986 17.9167 8.12767 17.5084L15.0438 10.5834C15.3684 10.2584 15.3684 9.73337 15.0438 9.40837L8.12767 2.48337C7.71986 2.07504 7.06237 2.07504 6.65456 2.48337C6.24675 2.89171 6.24675 3.55004 6.65456 3.95837L12.6802 10L6.64624 16.0417C6.24675 16.4417 6.24675 17.1084 6.65456 17.5084Z"
+                    fill="currentColor"></path>
+                </svg>
+              </button>
+            </div>
+
+            <!-- <div id="trustedInstitutionSlider" class="trusted-institutions-slider swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="institutions">
+                    <div class="institution">
+                      <img src="./assets/images/trusted/image_1.png" alt="Scholly" />
+                    </div>
+                    <div class="institution">
+                      <img src="./assets/images/trusted/image_6.png" alt="Scholly" />
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="institutions">
+                    <div class="institution">
+                      <img src="./assets/images/trusted/image_2.png" alt="Scholly" />
+                    </div>
+                    <div class="institution">
+                      <img src="./assets/images/trusted/image_4.png" alt="Scholly" />
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="institutions">
+                    <div class="institution">
+                      <img src="./assets/images/trusted/image_2.png" alt="Scholly" />
+                    </div>
+                    <div class="institution">
+                      <img src="./assets/images/trusted/image_4.png" alt="Scholly" />
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="institutions">
+                    <div class="institution">
+                      <img src="./assets/images/trusted/image_2.png" alt="Scholly" />
+                    </div>
+                    <div class="institution">
+                      <img src="./assets/images/trusted/image_4.png" alt="Scholly" />
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="institutions">
+                    <div class="institution">
+                      <img src="./assets/images/trusted/image_2.png" alt="Scholly" />
+                    </div>
+                    <div class="institution">
+                      <img src="./assets/images/trusted/image_4.png" alt="Scholly" />
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="institutions">
+                    <div class="institution">
+                      <img src="./assets/images/trusted/image_2.png" alt="Scholly" />
+                    </div>
+                    <div class="institution">
+                      <img src="./assets/images/trusted/image_4.png" alt="Scholly" />
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="institutions">
+                    <div class="institution">
+                      <img src="./assets/images/trusted/image_1.png" alt="Scholly" />
+                    </div>
+                    <div class="institution">
+                      <img src="./assets/images/trusted/image_6.png" alt="Scholly" />
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="institutions">
+                    <div class="institution">
+                      <img src="./assets/images/trusted/image_2.png" alt="Scholly" />
+                    </div>
+                    <div class="institution">
+                      <img src="./assets/images/trusted/image_4.png" alt="Scholly" />
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="institutions">
+                    <div class="institution">
+                      <img src="./assets/images/trusted/image_2.png" alt="Scholly" />
+                    </div>
+                    <div class="institution">
+                      <img src="./assets/images/trusted/image_4.png" alt="Scholly" />
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="institutions">
+                    <div class="institution">
+                      <img src="./assets/images/trusted/image_2.png" alt="Scholly" />
+                    </div>
+                    <div class="institution">
+                      <img src="./assets/images/trusted/image_4.png" alt="Scholly" />
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="institutions">
+                    <div class="institution">
+                      <img src="./assets/images/trusted/image_2.png" alt="Scholly" />
+                    </div>
+                    <div class="institution">
+                      <img src="./assets/images/trusted/image_4.png" alt="Scholly" />
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="institutions">
+                    <div class="institution">
+                      <img src="./assets/images/trusted/image_2.png" alt="Scholly" />
+                    </div>
+                    <div class="institution">
+                      <img src="./assets/images/trusted/image_4.png" alt="Scholly" />
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="institutions">
+                    <div class="institution">
+                      <img src="./assets/images/trusted/image_1.png" alt="Scholly" />
+                    </div>
+                    <div class="institution">
+                      <img src="./assets/images/trusted/image_6.png" alt="Scholly" />
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="institutions">
+                    <div class="institution">
+                      <img src="./assets/images/trusted/image_2.png" alt="Scholly" />
+                    </div>
+                    <div class="institution">
+                      <img src="./assets/images/trusted/image_4.png" alt="Scholly" />
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="institutions">
+                    <div class="institution">
+                      <img src="./assets/images/trusted/image_2.png" alt="Scholly" />
+                    </div>
+                    <div class="institution">
+                      <img src="./assets/images/trusted/image_4.png" alt="Scholly" />
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="institutions">
+                    <div class="institution">
+                      <img src="./assets/images/trusted/image_2.png" alt="Scholly" />
+                    </div>
+                    <div class="institution">
+                      <img src="./assets/images/trusted/image_4.png" alt="Scholly" />
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="institutions">
+                    <div class="institution">
+                      <img src="./assets/images/trusted/image_2.png" alt="Scholly" />
+                    </div>
+                    <div class="institution">
+                      <img src="./assets/images/trusted/image_4.png" alt="Scholly" />
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="institutions">
+                    <div class="institution">
+                      <img src="./assets/images/trusted/image_2.png" alt="Scholly" />
+                    </div>
+                    <div class="institution">
+                      <img src="./assets/images/trusted/image_4.png" alt="Scholly" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of Trusted Institutions -->
+    <!-- Signup -->
+    <section class="signup wrapper">
+      <div class="star-1">
+        <svg width="42" height="61" viewBox="0 0 42 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M42 30.1539C24.4186 32.8649 22.888 35.0626 21 60.3078C19.1119 35.0626 17.5814 32.8649 0 30.1539C17.5814 27.4429 19.112 25.2451 21 0C22.888 25.2451 24.4186 27.4429 42 30.1539Z"
+            fill="currentColor" />
+        </svg>
+      </div>
+      <div class="star-2">
+        <svg width="42" height="61" viewBox="0 0 42 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M42 30.1539C24.4186 32.8649 22.888 35.0626 21 60.3078C19.1119 35.0626 17.5814 32.8649 0 30.1539C17.5814 27.4429 19.112 25.2451 21 0C22.888 25.2451 24.4186 27.4429 42 30.1539Z"
+            fill="currentColor" />
+        </svg>
+      </div>
+      <div class="star-3">
+        <svg width="27" height="39" viewBox="0 0 27 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M26.6776 19.1531C15.5103 20.8751 14.5381 22.271 13.3388 38.3062C12.1396 22.271 11.1674 20.8751 0 19.1531C11.1674 17.4311 12.1396 16.0352 13.3388 0C14.5381 16.0352 15.5103 17.4311 26.6776 19.1531Z"
+            fill="currentColor" />
+        </svg>
+      </div>
+      <div class="star-4">
+        <svg width="27" height="39" viewBox="0 0 27 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M26.6776 19.1531C15.5103 20.8751 14.5381 22.271 13.3388 38.3062C12.1396 22.271 11.1674 20.8751 0 19.1531C11.1674 17.4311 12.1396 16.0352 13.3388 0C14.5381 16.0352 15.5103 17.4311 26.6776 19.1531Z"
+            fill="currentColor" />
+        </svg>
+      </div>
+      <div class="content signup-content">
+        <div class="column">
+          <header class="signup-header">
+            <p class="signup-preheader">
+              Feel free to
+              <span class="curve-underline">Signup</span>
+            </p>
+            <h2>
+              Get a free account to explore courses & your
+              institution for further study !
+            </h2>
+          </header>
+          <button class="btn btn-primary btn-3xl">
+            Free Signup
+          </button>
+        </div>
+        <div class="column">
+          <div class="focus-img-2">
+            <img src="./assets/images/focus-img/focus-img-5.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of Signup -->
+
     <!-- Counselor -->
     <section class="counselor wrapper">
       <div class="content">
@@ -351,7 +649,8 @@
               </svg>
             </div>
             <figcaption class="counselor-figcaption">
-              Well trained counselor to make your journey success.
+              Well trained counselor to make your journey
+              success.
             </figcaption>
           </figure>
         </div>
@@ -370,14 +669,18 @@
                 <img src="./assets/images/counselor/profile-1.png" alt="" />
               </div>
               <div class="counselor-info">
-                <h3 class="counselor-name">David John Doe</h3>
+                <h3 class="counselor-name">
+                  David John Doe
+                </h3>
                 <div class="counselor-country">
                   <div class="counselor-country-flag">
                     <img src="./assets/images/counselor/australia.svg" alt="australia" />
                   </div>
                   <span class="counselor-country-name">Australia</span>
                 </div>
-                <p class="counselor-languages">Spanish, English, Japanese</p>
+                <p class="counselor-languages">
+                  Spanish, English, Japanese
+                </p>
               </div>
             </header>
             <div class="counselor-details">
@@ -413,14 +716,18 @@
                 <img src="./assets/images/counselor/profile-2.png" alt="" />
               </div>
               <div class="counselor-info">
-                <h3 class="counselor-name">David John Doe</h3>
+                <h3 class="counselor-name">
+                  David John Doe
+                </h3>
                 <div class="counselor-country">
                   <div class="counselor-country-flag">
                     <img src="./assets/images/counselor/bangladesh.svg" alt="australia" />
                   </div>
                   <span class="counselor-country-name">Australia</span>
                 </div>
-                <p class="counselor-languages">Spanish, English, Japanese</p>
+                <p class="counselor-languages">
+                  Spanish, English, Japanese
+                </p>
               </div>
             </header>
             <div class="counselor-details">
@@ -456,14 +763,18 @@
                 <img src="./assets/images/counselor/profile-3.png" alt="" />
               </div>
               <div class="counselor-info">
-                <h3 class="counselor-name">David John Doe</h3>
+                <h3 class="counselor-name">
+                  David John Doe
+                </h3>
                 <div class="counselor-country">
                   <div class="counselor-country-flag">
                     <img src="./assets/images/counselor/thailand.svg" alt="australia" />
                   </div>
                   <span class="counselor-country-name">Australia</span>
                 </div>
-                <p class="counselor-languages">Spanish, English, Japanese</p>
+                <p class="counselor-languages">
+                  Spanish, English, Japanese
+                </p>
               </div>
             </header>
             <div class="counselor-details">
@@ -499,14 +810,18 @@
                 <img src="./assets/images/counselor/profile-4.png" alt="" />
               </div>
               <div class="counselor-info">
-                <h3 class="counselor-name">David John Doe</h3>
+                <h3 class="counselor-name">
+                  David John Doe
+                </h3>
                 <div class="counselor-country">
                   <div class="counselor-country-flag">
                     <img src="./assets/images/counselor/korea.svg" alt="australia" />
                   </div>
                   <span class="counselor-country-name">Australia</span>
                 </div>
-                <p class="counselor-languages">Spanish, English, Japanese</p>
+                <p class="counselor-languages">
+                  Spanish, English, Japanese
+                </p>
               </div>
             </header>
             <div class="counselor-details">
@@ -544,6 +859,7 @@
       </div>
     </section>
     <!-- End of Counselor -->
+
     <!-- Works -->
     <section class="works wrapper">
       <div class="content">
@@ -551,8 +867,9 @@
           <div class="">
             <h2>How scholly Works ?</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-              eu arcu id mi sollicitudin commodo a a augue.
+              Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit. Morbi eu arcu id mi
+              sollicitudin commodo a a augue.
             </p>
           </div>
 
@@ -572,45 +889,155 @@
             <header class="works-card-header">
               <div class="works-card-img">
                 <img src="./assets/images/start/card-5.svg" alt="" />
-                <h3 class="works-card-title">Search your course</h3>
+                <h3 class="works-card-title">
+                  Search your course
+                </h3>
               </div>
             </header>
             <p class="works-card-description">
-              A course usually covers an individual subject. Courses generally
-              have a fixed program of sessions every week during the term,
-              called lessons or classes.
+              A course usually covers an individual subject.
+              Courses generally have a fixed program of
+              sessions every week during the term, called
+              lessons or classes.
             </p>
           </li>
           <li class="works-card">
             <header class="works-card-header">
               <div class="works-card-img">
                 <img src="./assets/images/start/card-1.svg" alt="" />
-                <h3 class="works-card-title">Signup & create profile</h3>
+                <h3 class="works-card-title">
+                  Signup & create profile
+                </h3>
               </div>
             </header>
             <p class="works-card-description">
-              A course usually covers an individual subject. Courses generally
-              have a fixed program of sessions every week during the term,
-              called lessons or classes.
+              A course usually covers an individual subject.
+              Courses generally have a fixed program of
+              sessions every week during the term, called
+              lessons or classes.
             </p>
           </li>
           <li class="works-card">
             <header class="works-card-header">
               <div class="works-card-img">
                 <img src="./assets/images/start/card-3.svg" alt="" />
-                <h3 class="works-card-title">Get expert help</h3>
+                <h3 class="works-card-title">
+                  Get expert help
+                </h3>
               </div>
             </header>
             <p class="works-card-description">
-              A course usually covers an individual subject. Courses generally
-              have a fixed program of sessions every week during the term,
-              called lessons or classes.
+              A course usually covers an individual subject.
+              Courses generally have a fixed program of
+              sessions every week during the term, called
+              lessons or classes.
             </p>
           </li>
         </ul>
       </div>
     </section>
     <!-- End of Works -->
+
+    <section class="help wrapper">
+      <div class="content">
+        <div class="column">
+          <div class="help-video">
+            <video src=""></video>
+          </div>
+        </div>
+        <div class="column"></div>
+      </div>
+    </section>
+
+    <!-- Facts -->
+    <section class="facts wrapper">
+      <div class="facts-content content">
+        <header class="facts-header">
+          <h2>Key Facts About Scholly</h2>
+          <p>
+            Everything you want to know about affordable & accessible
+            institutions across the Australia
+          </p>
+        </header>
+        <div class="facts-items-wrapper">
+          <ul class="facts-items">
+            <li class="facts-item">
+              <span>20000+</span>
+              Student Assisted
+            </li>
+            <li class="facts-item">
+              <span>20+</span>
+              Team Members Globally
+            </li>
+            <li class="facts-item">
+              <span>200+</span>
+              Partner Institution
+            </li>
+            <li class="facts-item">
+              <span>350+</span>
+              Number of offices
+            </li>
+          </ul>
+        </div>
+
+        <div class="facts-avatar">
+          <img src="./assets/images/avatars/avatar-1.png" alt="" />
+        </div>
+        <div class="facts-avatar">
+          <img src="./assets/images/avatars/avatar-2.png" alt="" />
+        </div>
+        <div class="facts-avatar">
+          <img src="./assets/images/avatars/avatar-3.png" alt="" />
+        </div>
+        <div class="facts-avatar">
+          <img src="./assets/images/avatars/avatar-4.png" alt="" />
+        </div>
+        <div class="facts-avatar">
+          <img src="./assets/images/avatars/avatar-5.png" alt="" />
+        </div>
+      </div>
+    </section>
+    <!-- End of Facts -->
+    <!-- Bridge -->
+    <section class="bridge wrapper">
+      <div class="content bridge-content">
+        <article class="column">
+          <header class="bridge-header">
+            <h2>We Build Bridges Between</h2>
+            <p>Education Institutions & Prospective Students</p>
+            <div class="bridge-img focus-img-3 mobile-only">
+              <img src="./assets/images/focus-img/focus-img-8.jpg" alt="Student Holding Books with a Smile" />
+            </div>
+          </header>
+          <ul class="bridge-list">
+            <li class="bridge-list-item">
+              Lorem ipsum dolor sit amet, consectetur adipiscing
+              elit, sed do eiusmod tempor incididunt ut labore et.
+            </li>
+            <li class="bridge-list-item">
+              Lorem ipsum dolor sit amet, consectetur adipiscing
+              elit, sed do eiusmod tempor incididunt ut labore et.
+            </li>
+            <li class="bridge-list-item">
+              Lorem ipsum dolor sit amet, consectetur adipiscing
+              elit, sed do eiusmod tempor incididunt ut labore et.
+            </li>
+          </ul>
+          <footer>
+            <button class="btn btn-primary">
+              <a href="./providers.html">Explore Our Courses</a>
+            </button>
+          </footer>
+        </article>
+
+        <div class="column">
+          <div class="bridge-img focus-img-3 desktop-only">
+            <img src="./assets/images/focus-img/focus-img-8.jpg" alt="Student Holding Books with a Smile" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of Bridge -->
   </main>
   <!-- Footer -->
   <footer class="footer wrapper">
@@ -621,11 +1048,12 @@
             <img src="./assets/images/logo-white.png" alt="Scholly" width="81" height="38" />
           </div>
           <p class="footer-description">
-            Scholly, an Australian based EdTech, a unique platform to empower
-            the international student recruitment industry by providing tools,
-            expertise, premium support and connecting educational institutions
-            with vetted recruitment partners and students in leading and
-            emerging source countries.
+            Scholly, an Australian based EdTech, a unique
+            platform to empower the international student
+            recruitment industry by providing tools, expertise,
+            premium support and connecting educational
+            institutions with vetted recruitment partners and
+            students in leading and emerging source countries.
           </p>
           <a href="/contact-us" class="footer-list-item">
             <div class="footer-list-icon">
@@ -639,7 +1067,9 @@
                   stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </div>
-            <span class="footer-list-text"> Queensland, Australia </span>
+            <span class="footer-list-text">
+              Queensland, Australia
+            </span>
           </a>
           <a href="tel:0902222234" class="footer-list-item">
             <div class="footer-list-icon">
