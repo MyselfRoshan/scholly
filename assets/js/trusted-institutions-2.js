@@ -1,31 +1,46 @@
-import Swiper from "../../node_modules/swiper/swiper-bundle.min.mjs"
+import { tns } from "../../node_modules/tiny-slider/src/tiny-slider.js"
 
-// const swipper = new Swiper("#trustedInstitutionSlider", {
-const swipper = new Swiper("#trustedInstitutionSlider", {
-    loop: true,
-    // pagination: {
-    //     el: ".review-pagination",
-    //     type: "fraction",
-    // },
-    spaceBetween: 32,
-    // resistance: true,
-    navigation: {
-        prevEl: "#prevInstitutions",
-        nextEl: "#nextInstitutions",
+let slider = tns({
+    container: "#trustedInstitutionSlider",
+    items: 6,
+    edgePadding: 32,
+    gutter: 32,
+    autoWidth: true,
+    slideBy: "page",
+    speed: 400,
+    autoplay: true,
+    autoplayHoverPause: true,
+    autoplayTimeout: 10000,
+    swipeAngle: false,
+    prevButton: "#prevInstitutions",
+    nextButton: "#nextInstitutions",
+    lazyload: true,
+
+    responsive: {
+        // 1024: {
+        //     items: 4,
+        // },
+        1200: {
+            items: 6,
+        },
     },
+    // mouseDrag: true,
 })
 
-// const swipper1 = new Swiper(".swiper", {
-//     // loop: true,
-//     spaceBetween: 16,
-//     // pagination: {
-//     //     el: ".review-pagination",
-//     //     type: "fraction",
-//     // },
-//     navigation: {
-//         nextEl: ".swiper-button-next",
-//         prevEl: ".swiper-button-prev",
-//         // nextEl: "#nextInstitutions",
-//         // prevEl: "#prevInstitutions",
-//     },
-// })
+const updateSlideInfo = ({ slideCount, displayIndex, slideBy }) => {
+    const currentSlide = document.querySelector(
+        "#trustedInstitutionSliderPagination .currentSlide",
+    )
+    const totalSlides = document.querySelector(
+        "#trustedInstitutionSliderPagination .totalSlides",
+    )
+    const currentSlideValue = 4 - (slideCount - displayIndex + 1) / slideBy
+    const totalSlidesValue = slideCount / slideBy
+
+    if (currentSlide) currentSlide.innerText = currentSlideValue
+    if (totalSlides) totalSlides.innerText = totalSlidesValue
+}
+// On initial load
+updateSlideInfo(slider.getInfo())
+// On slide change
+slider.events.on("indexChanged", info => updateSlideInfo(info))

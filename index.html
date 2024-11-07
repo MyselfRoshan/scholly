@@ -28,8 +28,7 @@
   <script defer src="./assets/js/courses-tabs.js"></script>
   <!-- End of Script -->
 
-  <!-- Trusted Institutions Slider -->
-  <link rel="stylesheet" href="./node_modules/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./node_modules/tiny-slider/dist/tiny-slider.css" type="text/css" />
   <script defer type="module" src="./assets/js/trusted-institutions-2.js"></script>
   <!-- End of Trusted Institutions -->
 </head>
@@ -298,25 +297,29 @@
     <!-- Trusted Institutions -->
     <section class="wrapper trusted">
       <div class="breakout-left trusted-content">
-        <div class="breakout-left trusted-content">
-          <div class="column">
-            <div class="trusted-focus-img">
-              <img src="./assets/images/focus-img/focus-img-6.jpg" alt="Scholly" />
-            </div>
+        <div class="column">
+          <div class="trusted-focus-img">
+            <img src="./assets/images/focus-img/focus-img-6.jpg" alt="Scholly" />
           </div>
-          <div class="column">
-            <header class="trusted-header">
-              <h2>
-                Trusted by 1100+ Australian Institutions
-              </h2>
-            </header>
-            <p class="trusted-description">
-              Lorem ipsum dolor sit amet, consectetur
-              adipiscing elit. Morbi eu arcu id mi
-              sollicitudin commodo a a augue.
-            </p>
-            <!-- <div class="abc"> -->
+        </div>
+        <div class="column">
+          <header class="trusted-header">
+            <h2>Trusted by 1100+ Australian Institutions</h2>
+          </header>
+          <p class="trusted-description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing
+            elit. Morbi eu arcu id mi sollicitudin commodo a a
+            augue.
+          </p>
 
+
+        </div>
+        <div class="column">
+          <div class="slider-controls">
+            <span id="trustedInstitutionSliderPagination" class="trusted-institutions-slider-pagination">
+              <span class="currentSlide">1</span>/
+              <div class="totalSlides">3</div>
+            </span>
             <div class="trusted-institutions-btns">
               <button id="prevInstitutions" class="left">
                 <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -334,191 +337,189 @@
               </button>
             </div>
 
-            <!-- <div id="trustedInstitutionSlider" class="trusted-institutions-slider swiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="institutions">
-                    <div class="institution">
-                      <img src="./assets/images/trusted/image_1.png" alt="Scholly" />
-                    </div>
-                    <div class="institution">
-                      <img src="./assets/images/trusted/image_6.png" alt="Scholly" />
-                    </div>
-                  </div>
+          </div>
+          <section id="trustedInstitutionSlider" class="trusted-institutions-slider">
+            <div class="splide__slide">
+              <div class="institutions">
+                <div class="institution">
+                  <img src="./assets/images/trusted/image_1.png" alt="Scholly" />
                 </div>
-                <div class="swiper-slide">
-                  <div class="institutions">
-                    <div class="institution">
-                      <img src="./assets/images/trusted/image_2.png" alt="Scholly" />
-                    </div>
-                    <div class="institution">
-                      <img src="./assets/images/trusted/image_4.png" alt="Scholly" />
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="institutions">
-                    <div class="institution">
-                      <img src="./assets/images/trusted/image_2.png" alt="Scholly" />
-                    </div>
-                    <div class="institution">
-                      <img src="./assets/images/trusted/image_4.png" alt="Scholly" />
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="institutions">
-                    <div class="institution">
-                      <img src="./assets/images/trusted/image_2.png" alt="Scholly" />
-                    </div>
-                    <div class="institution">
-                      <img src="./assets/images/trusted/image_4.png" alt="Scholly" />
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="institutions">
-                    <div class="institution">
-                      <img src="./assets/images/trusted/image_2.png" alt="Scholly" />
-                    </div>
-                    <div class="institution">
-                      <img src="./assets/images/trusted/image_4.png" alt="Scholly" />
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="institutions">
-                    <div class="institution">
-                      <img src="./assets/images/trusted/image_2.png" alt="Scholly" />
-                    </div>
-                    <div class="institution">
-                      <img src="./assets/images/trusted/image_4.png" alt="Scholly" />
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="institutions">
-                    <div class="institution">
-                      <img src="./assets/images/trusted/image_1.png" alt="Scholly" />
-                    </div>
-                    <div class="institution">
-                      <img src="./assets/images/trusted/image_6.png" alt="Scholly" />
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="institutions">
-                    <div class="institution">
-                      <img src="./assets/images/trusted/image_2.png" alt="Scholly" />
-                    </div>
-                    <div class="institution">
-                      <img src="./assets/images/trusted/image_4.png" alt="Scholly" />
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="institutions">
-                    <div class="institution">
-                      <img src="./assets/images/trusted/image_2.png" alt="Scholly" />
-                    </div>
-                    <div class="institution">
-                      <img src="./assets/images/trusted/image_4.png" alt="Scholly" />
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="institutions">
-                    <div class="institution">
-                      <img src="./assets/images/trusted/image_2.png" alt="Scholly" />
-                    </div>
-                    <div class="institution">
-                      <img src="./assets/images/trusted/image_4.png" alt="Scholly" />
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="institutions">
-                    <div class="institution">
-                      <img src="./assets/images/trusted/image_2.png" alt="Scholly" />
-                    </div>
-                    <div class="institution">
-                      <img src="./assets/images/trusted/image_4.png" alt="Scholly" />
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="institutions">
-                    <div class="institution">
-                      <img src="./assets/images/trusted/image_2.png" alt="Scholly" />
-                    </div>
-                    <div class="institution">
-                      <img src="./assets/images/trusted/image_4.png" alt="Scholly" />
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="institutions">
-                    <div class="institution">
-                      <img src="./assets/images/trusted/image_1.png" alt="Scholly" />
-                    </div>
-                    <div class="institution">
-                      <img src="./assets/images/trusted/image_6.png" alt="Scholly" />
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="institutions">
-                    <div class="institution">
-                      <img src="./assets/images/trusted/image_2.png" alt="Scholly" />
-                    </div>
-                    <div class="institution">
-                      <img src="./assets/images/trusted/image_4.png" alt="Scholly" />
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="institutions">
-                    <div class="institution">
-                      <img src="./assets/images/trusted/image_2.png" alt="Scholly" />
-                    </div>
-                    <div class="institution">
-                      <img src="./assets/images/trusted/image_4.png" alt="Scholly" />
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="institutions">
-                    <div class="institution">
-                      <img src="./assets/images/trusted/image_2.png" alt="Scholly" />
-                    </div>
-                    <div class="institution">
-                      <img src="./assets/images/trusted/image_4.png" alt="Scholly" />
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="institutions">
-                    <div class="institution">
-                      <img src="./assets/images/trusted/image_2.png" alt="Scholly" />
-                    </div>
-                    <div class="institution">
-                      <img src="./assets/images/trusted/image_4.png" alt="Scholly" />
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="institutions">
-                    <div class="institution">
-                      <img src="./assets/images/trusted/image_2.png" alt="Scholly" />
-                    </div>
-                    <div class="institution">
-                      <img src="./assets/images/trusted/image_4.png" alt="Scholly" />
-                    </div>
-                  </div>
+                <div class="institution">
+                  <img src="./assets/images/trusted/image_6.png" alt="Scholly" />
                 </div>
               </div>
-            </div> -->
-          </div>
+            </div>
+            <div class="splide__slide">
+              <div class="institutions">
+                <div class="institution">
+                  <img src="./assets/images/trusted/image_1.png" alt="Scholly" />
+                </div>
+                <div class="institution">
+                  <img src="./assets/images/trusted/image_2.png" alt="Scholly" />
+                </div>
+              </div>
+            </div>
+            <div class="splide__slide">
+              <div class="institutions">
+                <div class="institution">
+                  <img src="./assets/images/trusted/image_3.png" alt="Scholly" />
+                </div>
+                <div class="institution">
+                  <img src="./assets/images/trusted/image_4.png" alt="Scholly" />
+                </div>
+              </div>
+            </div>
+            <div class="splide__slide">
+              <div class="institutions">
+                <div class="institution">
+                  <img src="./assets/images/trusted/image_5.png" alt="Scholly" />
+                </div>
+                <div class="institution">
+                  <img src="./assets/images/trusted/image_6.png" alt="Scholly" />
+                </div>
+              </div>
+            </div>
+            <div class="splide__slide">
+              <div class="institutions">
+                <div class="institution">
+                  <img src="./assets/images/trusted/image_1.png" alt="Scholly" />
+                </div>
+                <div class="institution">
+                  <img src="./assets/images/trusted/image_2.png" alt="Scholly" />
+                </div>
+              </div>
+            </div>
+            <div class="splide__slide">
+              <div class="institutions">
+                <div class="institution">
+                  <img src="./assets/images/trusted/image_3.png" alt="Scholly" />
+                </div>
+                <div class="institution">
+                  <img src="./assets/images/trusted/image_4.png" alt="Scholly" />
+                </div>
+              </div>
+            </div>
+            <div class="splide__slide">
+              <div class="institutions">
+                <div class="institution">
+                  <img src="./assets/images/trusted/image_5.png" alt="Scholly" />
+                </div>
+                <div class="institution">
+                  <img src="./assets/images/trusted/image_6.png" alt="Scholly" />
+                </div>
+              </div>
+            </div>
+            <div class="splide__slide">
+              <div class="institutions">
+                <div class="institution">
+                  <img src="./assets/images/trusted/image_2.png" alt="Scholly" />
+                </div>
+                <div class="institution">
+                  <img src="./assets/images/trusted/image_4.png" alt="Scholly" />
+                </div>
+              </div>
+            </div>
+            <div class="splide__slide">
+              <div class="institutions">
+                <div class="institution">
+                  <img src="./assets/images/trusted/image_2.png" alt="Scholly" />
+                </div>
+                <div class="institution">
+                  <img src="./assets/images/trusted/image_4.png" alt="Scholly" />
+                </div>
+              </div>
+            </div>
+            <div class="splide__slide">
+              <div class="institutions">
+                <div class="institution">
+                  <img src="./assets/images/trusted/image_2.png" alt="Scholly" />
+                </div>
+                <div class="institution">
+                  <img src="./assets/images/trusted/image_4.png" alt="Scholly" />
+                </div>
+              </div>
+            </div>
+            <div class="splide__slide">
+              <div class="institutions">
+                <div class="institution">
+                  <img src="./assets/images/trusted/image_2.png" alt="Scholly" />
+                </div>
+                <div class="institution">
+                  <img src="./assets/images/trusted/image_4.png" alt="Scholly" />
+                </div>
+              </div>
+            </div>
+            <div class="splide__slide">
+              <div class="institutions">
+                <div class="institution">
+                  <img src="./assets/images/trusted/image_2.png" alt="Scholly" />
+                </div>
+                <div class="institution">
+                  <img src="./assets/images/trusted/image_4.png" alt="Scholly" />
+                </div>
+              </div>
+            </div>
+            <div class="splide__slide">
+              <div class="institutions">
+                <div class="institution">
+                  <img src="./assets/images/trusted/image_1.png" alt="Scholly" />
+                </div>
+                <div class="institution">
+                  <img src="./assets/images/trusted/image_6.png" alt="Scholly" />
+                </div>
+              </div>
+            </div>
+            <div class="splide__slide">
+              <div class="institutions">
+                <div class="institution">
+                  <img src="./assets/images/trusted/image_2.png" alt="Scholly" />
+                </div>
+                <div class="institution">
+                  <img src="./assets/images/trusted/image_4.png" alt="Scholly" />
+                </div>
+              </div>
+            </div>
+            <div class="splide__slide">
+              <div class="institutions">
+                <div class="institution">
+                  <img src="./assets/images/trusted/image_2.png" alt="Scholly" />
+                </div>
+                <div class="institution">
+                  <img src="./assets/images/trusted/image_4.png" alt="Scholly" />
+                </div>
+              </div>
+            </div>
+            <div class="splide__slide">
+              <div class="institutions">
+                <div class="institution">
+                  <img src="./assets/images/trusted/image_2.png" alt="Scholly" />
+                </div>
+                <div class="institution">
+                  <img src="./assets/images/trusted/image_4.png" alt="Scholly" />
+                </div>
+              </div>
+            </div>
+            <div class="splide__slide">
+              <div class="institutions">
+                <div class="institution">
+                  <img src="./assets/images/trusted/image_2.png" alt="Scholly" />
+                </div>
+                <div class="institution">
+                  <img src="./assets/images/trusted/image_4.png" alt="Scholly" />
+                </div>
+              </div>
+            </div>
+            <div class="splide__slide">
+              <div class="institutions">
+                <div class="institution">
+                  <img src="./assets/images/trusted/image_2.png" alt="Scholly" />
+                </div>
+                <div class="institution">
+                  <img src="./assets/images/trusted/image_4.png" alt="Scholly" />
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
       </div>
     </section>
@@ -938,16 +939,41 @@
     </section>
     <!-- End of Works -->
 
+    <!-- Help -->
     <section class="help wrapper">
-      <div class="content">
+      <div class="content help-content">
         <div class="column">
           <div class="help-video">
+            <div class="help-img">
+              <img src="./assets/images/focus-img/focus-img-7.png" alt="" />
+            </div>
             <video src=""></video>
+            <!-- <button class="help-play-btn">
+              <svg width="74" height="73" viewBox="0 0 74 73" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M37.3262 0C17.168 0 0.826172 16.3419 0.826172 36.5C0.826172 56.6581 17.168 73 37.3262 73C57.4843 73 73.8262 56.6581 73.8262 36.5C73.8262 16.3419 57.4843 0 37.3262 0ZM49.9421 38.4348L31.6921 49.841C31.3222 50.0716 30.9035 50.1875 30.4824 50.1875C30.1015 50.1875 29.7205 50.0928 29.3774 49.9012C28.6511 49.4991 28.2012 48.7361 28.2012 47.9062V25.0938C28.2012 24.2639 28.6511 23.5009 29.3774 23.0988C30.097 22.6933 30.9859 22.7201 31.6921 23.159L49.9421 34.5652C50.6082 34.983 51.0137 35.7137 51.0137 36.5C51.0137 37.2863 50.6082 38.0172 49.9421 38.4348Z"
+                  fill="white" />
+              </svg>
+            </button> -->
           </div>
         </div>
-        <div class="column"></div>
+        <div class="column">
+          <article class="help-card">
+            <h2>How We Help</h2>
+            <p class="help-description">
+              Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit. Morbi eu arcu id mi
+              sollicitudin commodo a a augue. Lorem ipsum
+              dolor sit amet, consectetur adipiscing elit.
+            </p>
+            <button class="btn btn-secondary">
+              <a href="">Get Started</a>
+            </button>
+          </article>
+        </div>
       </div>
     </section>
+    <!-- End of Help -->
 
     <!-- Facts -->
     <section class="facts wrapper">
@@ -955,8 +981,8 @@
         <header class="facts-header">
           <h2>Key Facts About Scholly</h2>
           <p>
-            Everything you want to know about affordable & accessible
-            institutions across the Australia
+            Everything you want to know about affordable &
+            accessible institutions across the Australia
           </p>
         </header>
         <div class="facts-items-wrapper">
@@ -1011,16 +1037,19 @@
           </header>
           <ul class="bridge-list">
             <li class="bridge-list-item">
-              Lorem ipsum dolor sit amet, consectetur adipiscing
-              elit, sed do eiusmod tempor incididunt ut labore et.
+              Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et.
             </li>
             <li class="bridge-list-item">
-              Lorem ipsum dolor sit amet, consectetur adipiscing
-              elit, sed do eiusmod tempor incididunt ut labore et.
+              Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et.
             </li>
             <li class="bridge-list-item">
-              Lorem ipsum dolor sit amet, consectetur adipiscing
-              elit, sed do eiusmod tempor incididunt ut labore et.
+              Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et.
             </li>
           </ul>
           <footer>
