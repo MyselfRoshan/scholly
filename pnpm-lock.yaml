@@ -8,16 +8,32 @@ importers:
 
   .:
     dependencies:
+      '@splidejs/splide':
+        specifier: ^4.1.4
+        version: 4.1.4
       swiper:
         specifier: ^11.1.14
         version: 11.1.14
+      tiny-slider:
+        specifier: ^2.9.4
+        version: 2.9.4
 
 packages:
+
+  '@splidejs/splide@4.1.4':
+    resolution: {integrity: sha512-5I30evTJcAJQXt6vJ26g2xEkG+l1nXcpEw4xpKh0/FWQ8ozmAeTbtniVtVmz2sH1Es3vgfC4SS8B2X4o5JMptA==}
 
   swiper@11.1.14:
     resolution: {integrity: sha512-VbQLQXC04io6AoAjIUWuZwW4MSYozkcP9KjLdrsG/00Q/yiwvhz9RQyt0nHXV10hi9NVnDNy1/wv7Dzq1lkOCQ==}
     engines: {node: '>= 4.7.0'}
 
+  tiny-slider@2.9.4:
+    resolution: {integrity: sha512-LAs2kldWcY+BqCKw4kxd4CMx2RhWrHyEePEsymlOIISTlOVkjfK40sSD7ay73eKXBLg/UkluAZpcfCstimHXew==}
+
 snapshots:
 
+  '@splidejs/splide@4.1.4': {}
+
   swiper@11.1.14: {}
+
+  tiny-slider@2.9.4: {}
